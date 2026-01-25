@@ -165,8 +165,15 @@ def run_interpretation(all_results, best_model_name, X_test):
     
     # SHAP analysis
     print(f"Calculating SHAP values...")
+    
+    # Check model type for SHAP
+    if 'logistic' in best_model_name.lower():
+        model_type = 'linear'
+    else:
+        model_type = 'tree'
+        
     shap_values, X_sample = interpreter.calculate_shap_values(
-        best_model, X_test, model_type='tree'
+        best_model, X_test, model_type=model_type
     )
     
     interpreter.plot_shap_summary(

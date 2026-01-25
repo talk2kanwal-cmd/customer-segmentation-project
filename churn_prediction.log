@@ -175,3 +175,130 @@ dtype: int64
 2026-01-25 22:21:24,079 - utils - WARNING - Model does not have feature_importances_ attribute
 2026-01-25 22:21:24,080 - utils - INFO - Calculating SHAP values for tree model
 2026-01-25 22:21:24,080 - utils - INFO - Sampling 500 instances for SHAP calculation
+2026-01-25 22:22:50,199 - utils - INFO - ============================================================
+2026-01-25 22:22:50,199 - utils - INFO - STEP 1: DATA GENERATION
+2026-01-25 22:22:50,199 - utils - INFO - ============================================================
+2026-01-25 22:22:50,200 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-01-25 22:22:50,227 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-01-25 22:22:50,227 - utils - INFO - Actual churn rate: 23.00%
+2026-01-25 22:22:50,230 - utils - INFO - Missing values: 611
+2026-01-25 22:22:50,232 - utils - INFO - 
+============================================================
+2026-01-25 22:22:50,232 - utils - INFO - STEP 2: EXPLORATORY DATA ANALYSIS
+2026-01-25 22:22:50,232 - utils - INFO - ============================================================
+2026-01-25 22:22:50,233 - utils - INFO - Starting full EDA pipeline
+2026-01-25 22:22:50,233 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:22:50,233 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:22:50,255 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-01-25 22:22:50,308 - utils - INFO - Analyzing churn distribution
+2026-01-25 22:22:50,947 - utils - INFO - Plotting numerical feature distributions
+2026-01-25 22:22:53,290 - utils - INFO - Plotting categorical feature distributions
+2026-01-25 22:22:54,122 - utils - INFO - Creating correlation heatmap
+2026-01-25 22:22:54,844 - utils - INFO - Performing statistical tests
+2026-01-25 22:22:54,880 - utils - INFO - EDA completed. Visualizations saved to F:\work\uet lahore\first semester\projects\customer-segmentation-project\outputs\eda
+2026-01-25 22:22:54,881 - utils - INFO - 
+============================================================
+2026-01-25 22:22:54,881 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-01-25 22:22:54,881 - utils - INFO - ============================================================
+2026-01-25 22:22:54,881 - utils - INFO - Starting preprocessing pipeline
+2026-01-25 22:22:54,882 - utils - INFO - Loading raw data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:22:54,882 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:22:54,907 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-01-25 22:22:54,908 - utils - INFO - Handling missing values
+2026-01-25 22:22:54,914 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-01-25 22:22:54,917 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-01-25 22:22:54,918 - utils - INFO - Imputed session_duration with median: 24.80
+2026-01-25 22:22:54,921 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-01-25 22:22:54,924 - utils - INFO - Encoding categorical features
+2026-01-25 22:22:54,929 - utils - INFO - Encoded 3 categorical columns
+2026-01-25 22:22:54,929 - utils - INFO - Splitting data into train/val/test sets
+2026-01-25 22:22:54,944 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-01-25 22:22:54,944 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-01-25 22:22:54,945 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-01-25 22:22:54,945 - utils - INFO - Train churn rate: 23.00%
+2026-01-25 22:22:54,945 - utils - INFO - Val churn rate: 23.00%
+2026-01-25 22:22:54,945 - utils - INFO - Test churn rate: 23.00%
+2026-01-25 22:22:55,164 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-01-25 22:22:55,236 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-01-25 22:22:55,303 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-01-25 22:22:55,305 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-01-25 22:22:55,306 - utils - INFO - Saved processed data and scaler
+2026-01-25 22:22:55,306 - utils - INFO - Preprocessing pipeline completed
+2026-01-25 22:22:55,307 - utils - INFO - 
+============================================================
+2026-01-25 22:22:55,307 - utils - INFO - STEP 4: MODEL TRAINING
+2026-01-25 22:22:55,307 - utils - INFO - ============================================================
+2026-01-25 22:22:55,308 - utils - INFO - Training all baseline models
+2026-01-25 22:22:55,308 - utils - INFO - Training Logistic Regression
+2026-01-25 22:22:55,326 - utils - INFO - Logistic Regression training completed
+2026-01-25 22:22:55,327 - utils - INFO - Evaluating Logistic Regression
+2026-01-25 22:22:55,345 - utils - INFO - Training Decision Tree
+2026-01-25 22:22:55,365 - utils - INFO - Decision Tree training completed
+2026-01-25 22:22:55,365 - utils - INFO - Evaluating Decision Tree
+2026-01-25 22:22:55,388 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-01-25 22:22:55,391 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-01-25 22:22:55,391 - utils - INFO - Saved baseline models
+2026-01-25 22:22:55,392 - utils - INFO - Training all advanced models
+2026-01-25 22:22:55,392 - utils - INFO - Training Random Forest
+2026-01-25 22:22:56,071 - utils - INFO - Random Forest training completed
+2026-01-25 22:22:56,072 - utils - INFO - Evaluating Random Forest
+2026-01-25 22:22:56,216 - utils - INFO - Training XGBoost
+2026-01-25 22:22:56,460 - utils - INFO - XGBoost training completed
+2026-01-25 22:22:56,460 - utils - INFO - Evaluating XGBoost
+2026-01-25 22:22:56,491 - utils - INFO - Training LightGBM
+2026-01-25 22:22:57,117 - utils - INFO - LightGBM training completed
+2026-01-25 22:22:57,118 - utils - INFO - Evaluating LightGBM
+2026-01-25 22:22:57,600 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\random_forest.pkl
+2026-01-25 22:22:57,610 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-01-25 22:22:57,630 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\lightgbm.pkl
+2026-01-25 22:22:57,631 - utils - INFO - Saved advanced models
+2026-01-25 22:22:57,632 - utils - INFO - 
+============================================================
+2026-01-25 22:22:57,632 - utils - INFO - STEP 5: MODEL EVALUATION
+2026-01-25 22:22:57,632 - utils - INFO - ============================================================
+2026-01-25 22:23:27,792 - utils - INFO - 
+============================================================
+2026-01-25 22:23:27,792 - utils - INFO - STEP 6: MODEL INTERPRETATION
+2026-01-25 22:23:27,793 - utils - INFO - ============================================================
+2026-01-25 22:23:28,483 - utils - INFO - Calculating SHAP values for linear model
+2026-01-25 22:23:28,484 - utils - INFO - Sampling 500 instances for SHAP calculation
+2026-01-25 22:23:28,487 - utils - INFO - SHAP values calculated successfully
+2026-01-25 22:30:32,541 - utils - INFO - Loading and preprocessing data
+2026-01-25 22:30:32,541 - utils - INFO - Starting preprocessing pipeline
+2026-01-25 22:30:32,541 - utils - INFO - Loading raw data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:30:32,541 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-01-25 22:30:32,565 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-01-25 22:30:32,565 - utils - INFO - Handling missing values
+2026-01-25 22:30:32,571 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-01-25 22:30:32,571 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-01-25 22:30:32,579 - utils - INFO - Imputed session_duration with median: 24.80
+2026-01-25 22:30:32,595 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-01-25 22:30:32,603 - utils - INFO - Encoding categorical features
+2026-01-25 22:30:32,611 - utils - INFO - Encoded 3 categorical columns
+2026-01-25 22:30:32,611 - utils - INFO - Splitting data into train/val/test sets
+2026-01-25 22:30:32,630 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-01-25 22:30:32,630 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-01-25 22:30:32,630 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-01-25 22:30:32,637 - utils - INFO - Train churn rate: 23.00%
+2026-01-25 22:30:32,637 - utils - INFO - Val churn rate: 23.00%
+2026-01-25 22:30:32,637 - utils - INFO - Test churn rate: 23.00%
+2026-01-25 22:30:32,841 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-01-25 22:30:32,907 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-01-25 22:30:33,003 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-01-25 22:30:33,003 - utils - INFO - Saved model to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-01-25 22:30:33,011 - utils - INFO - Saved processed data and scaler
+2026-01-25 22:30:33,011 - utils - INFO - Preprocessing pipeline completed
+2026-01-25 22:30:33,019 - utils - INFO - Training Random Forest for interpretation
+2026-01-25 22:30:33,019 - utils - INFO - Training Random Forest
+2026-01-25 22:30:33,819 - utils - INFO - Random Forest training completed
+2026-01-25 22:30:34,828 - utils - INFO - Calculating SHAP values for tree model
+2026-01-25 22:30:34,828 - utils - INFO - Sampling 500 instances for SHAP calculation
+2026-01-25 22:30:36,692 - utils - INFO - SHAP values calculated successfully
