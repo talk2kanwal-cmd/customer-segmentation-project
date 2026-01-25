@@ -26,19 +26,22 @@ class ModelInterpreter:
     def plot_feature_importance(self, model, feature_names, top_n=15, 
                                output_path=None):
         """
-        Plot feature importance from tree-based models
+        Plot feature importance from tree-based or linear models
         
         Args:
-            model: Trained model with feature_importances_
+            model: Trained model with feature_importances_ or coef_
             feature_names: List of feature names
             top_n: Number of top features to display
             output_path: Path to save figure
         """
-        if not hasattr(model, 'feature_importances_'):
-            self.logger.warning("Model does not have feature_importances_ attribute")
+        if hasattr(model, 'feature_importances_'):
+            importance = model.feature_importances_
+        elif hasattr(model, 'coef_'):
+            # Use absolute values of coefficients for linear models
+            importance = np.abs(model.coef_[0])
+        else:
+            self.logger.warning("Model does not have feature_importances_ or coef_ attribute")
             return None
-        
-        importance = model.feature_importances_
         indices = np.argsort(importance)[-top_n:]
         
         plt.figure(figsize=(10, 8))
