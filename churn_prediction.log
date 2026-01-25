@@ -1,0 +1,6 @@
+2026-01-25 21:26:10,157 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-01-25 21:26:10,192 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-01-25 21:26:10,193 - utils - INFO - Actual churn rate: 23.00%
+2026-01-25 21:26:10,197 - utils - INFO - Missing values: 611
+2026-01-25 21:26:10,269 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer segmentation project\data\raw\customer_data.csv
+2026-01-25 21:26:10,280 - utils - INFO - Data generation completed successfully
