@@ -32,8 +32,8 @@ def run_data_generation():
         random_seed=DATA_GENERATION['random_seed']
     )
     
-    print(f"\n✓ Generated {len(df)} customer records")
-    print(f"✓ Churn rate: {df['churned'].mean():.2%}")
+    print(f"\n[OK] Generated {len(df)} customer records")
+    print(f"[OK] Churn rate: {df['churned'].mean():.2%}")
     
     return df
 
@@ -47,7 +47,7 @@ def run_eda():
     analyzer = ExploratoryAnalyzer()
     analyzer.run_full_eda()
     
-    print(f"\n✓ EDA completed")
+    print(f"\n[OK] EDA completed")
 
 def run_preprocessing():
     """Run data preprocessing"""
@@ -59,10 +59,10 @@ def run_preprocessing():
     preprocessor = DataPreprocessor()
     X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_pipeline()
     
-    print(f"\n✓ Preprocessing completed")
-    print(f"✓ Train set: {X_train.shape}")
-    print(f"✓ Validation set: {X_val.shape}")
-    print(f"✓ Test set: {X_test.shape}")
+    print(f"\n[OK] Preprocessing completed")
+    print(f"[OK] Train set: {X_train.shape}")
+    print(f"[OK] Validation set: {X_val.shape}")
+    print(f"[OK] Test set: {X_test.shape}")
     
     return X_train, X_val, X_test, y_train, y_val, y_test
 
@@ -87,7 +87,7 @@ def run_model_training(X_train, y_train, X_val, y_val):
     advanced_results = advanced.train_all_advanced_models(X_train, y_train, X_val, y_val)
     all_results.update(advanced_results)
     
-    print(f"\n✓ Trained {len(all_results)} models")
+    print(f"\n[OK] Trained {len(all_results)} models")
     
     return all_results
 
@@ -133,14 +133,14 @@ def run_evaluation(all_results, X_test, y_test):
     # Save comparison
     comparison_df.to_csv(EVALUATION_DIR / 'model_comparison.csv', index=False)
     
-    print(f"\n✓ Model evaluation completed")
+    print(f"\n[OK] Model evaluation completed")
     print(f"\n{comparison_df.to_string(index=False)}")
     
     # Find best model
     best_model_name = comparison_df.loc[comparison_df['ROC-AUC'].idxmax(), 'Model']
     best_roc_auc = comparison_df['ROC-AUC'].max()
     
-    print(f"\n🏆 Best Model: {best_model_name} (ROC-AUC: {best_roc_auc:.4f})")
+    print(f"\n[BEST] Best Model: {best_model_name} (ROC-AUC: {best_roc_auc:.4f})")
     
     return test_results, best_model_name
 
@@ -182,7 +182,7 @@ def run_interpretation(all_results, best_model_name, X_test):
     # Generate insights
     insights = interpreter.generate_insights(importance_df, top_n=10)
     
-    print(f"\n✓ Model interpretation completed")
+    print(f"\n[OK] Model interpretation completed")
     print("\n" + "="*60)
     print("KEY INSIGHTS")
     print("="*60)
@@ -221,9 +221,9 @@ def run_full_pipeline():
     print("\n" + "="*70)
     print(" "*20 + "PIPELINE COMPLETED SUCCESSFULLY!")
     print("="*70)
-    print(f"\n📊 Visualizations saved to: outputs/")
-    print(f"💾 Models saved to: {SAVED_MODELS_DIR}")
-    print(f"🏆 Best model: {best_model_name}")
+    print(f"\n[INFO] Visualizations saved to: outputs/")
+    print(f"[INFO] Models saved to: {SAVED_MODELS_DIR}")
+    print(f"[BEST] Best model: {best_model_name}")
     print("\n" + "="*70)
 
 def main():

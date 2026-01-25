@@ -217,8 +217,8 @@ class ExploratoryAnalyzer:
         
         self.logger.info(f"EDA completed. Visualizations saved to {EDA_DIR}")
         
-        print(f"\n✓ EDA completed successfully!")
-        print(f"✓ Visualizations saved to: {EDA_DIR}")
+        print(f"\n[OK] EDA completed successfully!")
+        print(f"[OK] Visualizations saved to: {EDA_DIR}")
 
 def main():
     """Run EDA"""

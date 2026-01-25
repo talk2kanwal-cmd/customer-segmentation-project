@@ -70,11 +70,11 @@ class AdvancedModels:
         params['scale_pos_weight'] = scale_pos_weight
         
         if X_val is not None and y_val is not None:
+            params['early_stopping_rounds'] = 20
             model = xgb.XGBClassifier(**params)
             model.fit(
                 X_train, y_train,
                 eval_set=[(X_val, y_val)],
-                early_stopping_rounds=20,
                 verbose=False
             )
         else:
