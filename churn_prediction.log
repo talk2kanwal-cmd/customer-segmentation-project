@@ -601,3 +601,152 @@ dtype: int64
 2026-02-05 20:32:36,226 - utils - INFO - Creating correlation heatmap
 2026-02-05 20:32:36,822 - utils - INFO - Performing statistical tests
 2026-02-05 20:32:36,869 - utils - INFO - EDA completed. Visualizations saved to f:\work\uet lahore\first semester\projects\customer-segmentation-project\outputs\eda
+2026-02-05 20:45:28,027 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.14:5000
+2026-02-05 20:45:28,028 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-05 20:45:28,031 - werkzeug - INFO -  * Restarting with stat
+2026-02-05 20:45:30,864 - werkzeug - WARNING -  * Debugger is active!
+2026-02-05 20:45:30,870 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-05 20:47:05,475 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:05] "GET / HTTP/1.1" 200 -
+2026-02-05 20:47:05,602 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:05] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 20:47:05,952 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:05] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 20:47:05,953 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:05] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 20:47:06,267 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:06] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 20:47:06,270 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:06] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 20:47:06,942 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:06] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:47:07,194 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:07] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:47:07,263 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 20:47:07,446 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:07] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:47:08,029 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:47:08] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:48:41,993 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:48:42,005 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:48:42,031 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:48:42,031 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:48:42,038 - utils - INFO - Missing values: 3
+2026-02-05 20:48:42,068 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:48:42] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:48:45,841 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:48:45,843 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:48:45,846 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:48:45,846 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:48:45,850 - utils - INFO - Missing values: 4
+2026-02-05 20:48:45,861 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:48:45] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:50:14,607 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:14] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 20:50:15,087 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:15] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 20:50:16,566 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:16] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 20:50:17,159 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:17] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:50:17,420 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:17] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:50:22,615 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:50:22,616 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:50:22,624 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:50:22,625 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:50:22,627 - utils - INFO - Missing values: 3
+2026-02-05 20:50:22,635 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:22] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:50:23,814 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:50:23,817 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:50:23,840 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:50:23,844 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:50:23,848 - utils - INFO - Missing values: 3
+2026-02-05 20:50:23,879 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:23] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:50:25,218 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:50:25,221 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:50:25,229 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:50:25,230 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:50:25,231 - utils - INFO - Missing values: 5
+2026-02-05 20:50:25,236 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:50:25] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:51:53,428 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:51:53] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 20:51:53,469 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:51:53] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 20:51:53,690 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:51:53] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 20:51:54,276 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:51:54] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:51:54,561 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:51:54] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:52:01,250 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:01,252 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:01,256 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:01,256 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:01,257 - utils - INFO - Missing values: 4
+2026-02-05 20:52:01,264 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:01] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:02,775 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:02,776 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:02,785 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:02,786 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:02,789 - utils - INFO - Missing values: 5
+2026-02-05 20:52:02,801 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:02] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:03,762 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:03,765 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:03,770 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:03,770 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:03,771 - utils - INFO - Missing values: 4
+2026-02-05 20:52:03,780 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:03] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:06,051 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:06,053 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:06,072 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:06,073 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:06,073 - utils - INFO - Missing values: 4
+2026-02-05 20:52:06,090 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:06] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:26,566 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:26] "GET / HTTP/1.1" 200 -
+2026-02-05 20:52:26,990 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:26] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 20:52:27,018 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:27] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 20:52:27,411 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:27] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:52:27,652 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 20:52:27,791 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:27] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:52:34,538 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:34,539 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:34,549 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:34,550 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:34,552 - utils - INFO - Missing values: 4
+2026-02-05 20:52:34,558 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:34] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:35,884 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:35,888 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:35,904 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:35,905 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:35,913 - utils - INFO - Missing values: 4
+2026-02-05 20:52:35,979 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:35] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:39,171 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:39] "GET / HTTP/1.1" 200 -
+2026-02-05 20:52:39,486 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:39] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 20:52:39,587 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:39] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 20:52:39,944 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:39] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:52:40,195 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 20:52:40,247 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:40] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:52:42,687 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:42,690 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:42,696 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:42,696 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:42,697 - utils - INFO - Missing values: 4
+2026-02-05 20:52:42,708 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:42] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:43,995 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:44,045 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:44,062 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:44,064 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:44,067 - utils - INFO - Missing values: 5
+2026-02-05 20:52:44,113 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:44] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:52:44,991 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:52:44,994 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:52:45,000 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:52:45,001 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:52:45,004 - utils - INFO - Missing values: 5
+2026-02-05 20:52:45,021 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:52:45] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:53:26,782 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:26] "GET / HTTP/1.1" 200 -
+2026-02-05 20:53:26,837 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:26] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 20:53:27,046 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:27] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 20:53:29,091 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:29] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 20:53:29,709 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:29] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 20:53:30,023 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 20:53:38,344 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:53:38,346 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:53:38,362 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:53:38,363 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:53:38,365 - utils - INFO - Missing values: 6
+2026-02-05 20:53:38,415 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:38] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:53:39,616 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:53:39,618 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:53:39,628 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:53:39,628 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:53:39,629 - utils - INFO - Missing values: 5
+2026-02-05 20:53:39,640 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:39] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:53:52,836 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:53:52,838 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:53:52,850 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:53:52,851 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:53:52,855 - utils - INFO - Missing values: 5
+2026-02-05 20:53:52,885 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:52] "POST /api/generate-sample HTTP/1.1" 200 -

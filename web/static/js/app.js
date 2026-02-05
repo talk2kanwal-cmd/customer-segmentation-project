@@ -21,19 +21,19 @@ const elements = {
     fileSize: document.getElementById('file-size'),
     clearFileBtn: document.getElementById('clear-file-btn'),
     generateSampleBtn: document.getElementById('generate-sample-btn'),
-    
+
     modelSection: document.getElementById('model-section'),
     modelGrid: document.getElementById('model-grid'),
     predictBtn: document.getElementById('predict-btn'),
-    
+
     resultsSection: document.getElementById('results-section'),
     loadingOverlay: document.getElementById('loading-overlay'),
-    
+
     // Stats
     statModels: document.getElementById('stat-models'),
     statAccuracy: document.getElementById('stat-accuracy'),
     statPredictions: document.getElementById('stat-predictions'),
-    
+
     // Results
     highRiskCount: document.getElementById('high-risk-count'),
     highRiskPercent: document.getElementById('high-risk-percent'),
@@ -43,32 +43,32 @@ const elements = {
     lowRiskPercent: document.getElementById('low-risk-percent'),
     avgChurnProb: document.getElementById('avg-churn-prob'),
     totalCustomers: document.getElementById('total-customers'),
-    
+
     predictionsTableBody: document.getElementById('predictions-table-body'),
     downloadResultsBtn: document.getElementById('download-results-btn'),
-    
+
     toastContainer: document.getElementById('toast-container')
 };
 
 // === API CLIENT ===
 const API = {
     baseURL: '',
-    
+
     async get(endpoint) {
         const response = await fetch(`${this.baseURL}${endpoint}`);
         return await response.json();
     },
-    
+
     async post(endpoint, data, isFormData = false) {
         const options = {
             method: 'POST',
             body: isFormData ? data : JSON.stringify(data)
         };
-        
+
         if (!isFormData) {
             options.headers = { 'Content-Type': 'application/json' };
         }
-        
+
         const response = await fetch(`${this.baseURL}${endpoint}`, options);
         return await response.json();
     }
@@ -77,16 +77,16 @@ const API = {
 // === INITIALIZATION ===
 async function init() {
     console.log('Initializing Customer Churn Prediction System...');
-    
+
     // Setup event listeners
     setupEventListeners();
-    
+
     // Load available models
     await loadModels();
-    
+
     // Load model comparison
     await loadModelComparison();
-    
+
     showToast('System ready! Upload data to get started.', 'info');
 }
 
@@ -95,21 +95,21 @@ function setupEventListeners() {
     // File upload
     elements.uploadArea.addEventListener('click', () => elements.fileInput.click());
     elements.fileInput.addEventListener('change', handleFileSelect);
-    
+
     // Drag and drop
     elements.uploadArea.addEventListener('dragover', handleDragOver);
     elements.uploadArea.addEventListener('dragleave', handleDragLeave);
     elements.uploadArea.addEventListener('drop', handleDrop);
-    
+
     // Clear file
     elements.clearFileBtn.addEventListener('click', clearFile);
-    
+
     // Generate sample
     elements.generateSampleBtn.addEventListener('click', generateSampleData);
-    
+
     // Predict button
     elements.predictBtn.addEventListener('click', runPrediction);
-    
+
     // Download results
     elements.downloadResultsBtn.addEventListener('click', downloadResults);
 }
@@ -128,7 +128,7 @@ function handleDragLeave(e) {
 function handleDrop(e) {
     e.preventDefault();
     elements.uploadArea.classList.remove('drag-over');
-    
+
     const files = e.dataTransfer.files;
     if (files.length > 0) {
         processFile(files[0]);
@@ -148,21 +148,21 @@ async function processFile(file) {
         showToast('Please upload a CSV file', 'error');
         return;
     }
-    
+
     // Show file info
     elements.fileName.textContent = file.name;
     elements.fileSize.textContent = formatFileSize(file.size);
     elements.fileInfo.style.display = 'flex';
-    
+
     // Read file
     const text = await file.text();
     const rows = text.split('\n').filter(row => row.trim());
-    
+
     showToast(`File uploaded: ${rows.length - 1} customers`, 'success');
-    
+
     // Store file
     state.uploadedData = file;
-    
+
     // Show model selection
     elements.modelSection.style.display = 'block';
     elements.modelSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -179,22 +179,22 @@ function clearFile() {
 // === SAMPLE DATA GENERATION ===
 async function generateSampleData() {
     showLoading('Generating sample data...');
-    
+
     try {
         const response = await API.post('/api/generate-sample', {
             n_samples: 100,
             churn_rate: 0.23
         });
-        
+
         if (response.success) {
             // Convert to CSV
             const csv = jsonToCSV(response.data);
             const blob = new Blob([csv], { type: 'text/csv' });
             const file = new File([blob], 'sample_customers.csv', { type: 'text/csv' });
-            
-            // Process as uploaded file
-            processFile(file);
-            
+
+            // Process as uploaded file (must await)
+            await processFile(file);
+
             showToast(`Generated ${response.count} sample customers`, 'success');
         } else {
             showToast(response.error || 'Failed to generate sample data', 'error');
@@ -211,18 +211,18 @@ async function generateSampleData() {
 async function loadModels() {
     try {
         const response = await API.get('/api/models');
-        
+
         if (response.success) {
             state.availableModels = response.models;
             state.modelMetrics = response.metrics;
-            
+
             // Update stats
             elements.statModels.textContent = response.models.length;
-            
+
             // Find best accuracy
             const bestAccuracy = Math.max(...Object.values(response.metrics).map(m => m.roc_auc));
             elements.statAccuracy.textContent = (bestAccuracy * 100).toFixed(1) + '%';
-            
+
             // Render model cards
             renderModelCards();
         }
@@ -234,7 +234,7 @@ async function loadModels() {
 
 function renderModelCards() {
     elements.modelGrid.innerHTML = '';
-    
+
     state.availableModels.forEach(modelName => {
         const card = createModelCard(modelName);
         elements.modelGrid.appendChild(card);
@@ -245,14 +245,14 @@ function createModelCard(modelName) {
     const card = document.createElement('div');
     card.className = 'model-card';
     card.dataset.model = modelName;
-    
+
     const metrics = state.modelMetrics[modelName] || {};
-    
+
     const displayName = modelName
         .split('_')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-    
+
     card.innerHTML = `
         <h3 class="model-name">${displayName}</h3>
         <div class="model-metrics">
@@ -274,23 +274,23 @@ function createModelCard(modelName) {
             </div>
         </div>
     `;
-    
+
     card.addEventListener('click', () => selectModel(modelName, card));
-    
+
     return card;
 }
 
 function selectModel(modelName, card) {
     // Remove previous selection
     document.querySelectorAll('.model-card').forEach(c => c.classList.remove('selected'));
-    
+
     // Select new model
     card.classList.add('selected');
     state.selectedModel = modelName;
-    
+
     // Enable predict button
     elements.predictBtn.disabled = false;
-    
+
     showToast(`Selected: ${modelName.replace('_', ' ')}`, 'info');
 }
 
@@ -300,23 +300,23 @@ async function runPrediction() {
         showToast('Please upload data and select a model', 'error');
         return;
     }
-    
+
     showLoading('Running predictions...');
-    
+
     try {
         const formData = new FormData();
         formData.append('file', state.uploadedData);
         formData.append('model', state.selectedModel);
-        
+
         const response = await API.post('/api/predict', formData, true);
-        
+
         if (response.success) {
             state.predictions = response;
             displayResults(response);
-            
+
             // Update prediction count
             elements.statPredictions.textContent = response.summary.total_customers;
-            
+
             showToast('Predictions completed!', 'success');
         } else {
             showToast(response.error || 'Prediction failed', 'error');
@@ -332,26 +332,26 @@ async function runPrediction() {
 // === RESULTS DISPLAY ===
 function displayResults(response) {
     const { summary, predictions, risk_distribution } = response;
-    
+
     // Update summary cards
     elements.highRiskCount.textContent = summary.high_risk;
     elements.highRiskPercent.textContent = `${((summary.high_risk / summary.total_customers) * 100).toFixed(1)}%`;
-    
+
     elements.mediumRiskCount.textContent = summary.medium_risk;
     elements.mediumRiskPercent.textContent = `${((summary.medium_risk / summary.total_customers) * 100).toFixed(1)}%`;
-    
+
     elements.lowRiskCount.textContent = summary.low_risk;
     elements.lowRiskPercent.textContent = `${((summary.low_risk / summary.total_customers) * 100).toFixed(1)}%`;
-    
+
     elements.avgChurnProb.textContent = `${(summary.avg_churn_probability * 100).toFixed(1)}%`;
     elements.totalCustomers.textContent = `${summary.total_customers} customers`;
-    
+
     // Render table
     renderPredictionsTable(predictions);
-    
+
     // Render chart
     renderRiskChart(risk_distribution);
-    
+
     // Show results section
     elements.resultsSection.style.display = 'block';
     elements.resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -359,25 +359,25 @@ function displayResults(response) {
 
 function renderPredictionsTable(predictions) {
     elements.predictionsTableBody.innerHTML = '';
-    
+
     // Show first 50 rows
     const displayPredictions = predictions.slice(0, 50);
-    
+
     displayPredictions.forEach(pred => {
         const row = document.createElement('tr');
-        
+
         const riskClass = pred.risk_category.toLowerCase().replace(' risk', '');
-        
+
         row.innerHTML = `
             <td>${pred.customer_id}</td>
             <td>${(pred.churn_probability * 100).toFixed(2)}%</td>
             <td>${pred.predicted_churn ? 'Yes' : 'No'}</td>
             <td><span class="risk-badge ${riskClass}">${pred.risk_category}</span></td>
         `;
-        
+
         elements.predictionsTableBody.appendChild(row);
     });
-    
+
     if (predictions.length > 50) {
         const row = document.createElement('tr');
         row.innerHTML = `<td colspan="4" style="text-align: center; color: var(--text-muted);">Showing 50 of ${predictions.length} predictions. Download CSV for full results.</td>`;
@@ -387,12 +387,12 @@ function renderPredictionsTable(predictions) {
 
 function renderRiskChart(riskDistribution) {
     const ctx = document.getElementById('risk-chart').getContext('2d');
-    
+
     // Destroy existing chart if any
     if (window.riskChart) {
         window.riskChart.destroy();
     }
-    
+
     window.riskChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -444,7 +444,7 @@ function renderRiskChart(riskDistribution) {
 async function loadModelComparison() {
     try {
         const response = await API.get('/api/model-comparison');
-        
+
         if (response.success) {
             renderComparisonChart(response.data);
         }
@@ -455,13 +455,13 @@ async function loadModelComparison() {
 
 function renderComparisonChart(data) {
     const ctx = document.getElementById('comparison-chart').getContext('2d');
-    
+
     const models = data.map(d => d.Model.replace('_', ' '));
     const rocAuc = data.map(d => d['ROC-AUC'] * 100);
     const precision = data.map(d => d.Precision * 100);
     const recall = data.map(d => d.Recall * 100);
     const f1 = data.map(d => d['F1-Score'] * 100);
-    
+
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -544,7 +544,7 @@ function renderComparisonChart(data) {
 // === DOWNLOAD RESULTS ===
 function downloadResults() {
     if (!state.predictions) return;
-    
+
     const csv = jsonToCSV(state.predictions.predictions);
     const blob = new Blob([csv], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
@@ -553,7 +553,7 @@ function downloadResults() {
     a.download = `churn_predictions_${Date.now()}.csv`;
     a.click();
     URL.revokeObjectURL(url);
-    
+
     showToast('Results downloaded!', 'success');
 }
 
@@ -571,9 +571,9 @@ function showToast(message, type = 'info') {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     toast.textContent = message;
-    
+
     elements.toastContainer.appendChild(toast);
-    
+
     setTimeout(() => {
         toast.style.animation = 'slideInRight 0.3s ease-out reverse';
         setTimeout(() => toast.remove(), 300);
@@ -588,17 +588,17 @@ function formatFileSize(bytes) {
 
 function jsonToCSV(data) {
     if (!data || data.length === 0) return '';
-    
+
     const headers = Object.keys(data[0]);
-    const rows = data.map(obj => 
+    const rows = data.map(obj =>
         headers.map(header => {
             const value = obj[header];
-            return typeof value === 'string' && value.includes(',') 
-                ? `"${value}"` 
+            return typeof value === 'string' && value.includes(',')
+                ? `"${value}"`
                 : value;
         }).join(',')
     );
-    
+
     return [headers.join(','), ...rows].join('\n');
 }
 

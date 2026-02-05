@@ -11,6 +11,7 @@ This system analyzes historical customer behavioral data to identify users likel
 
 ## 📋 Features
 
+### Core ML Features
 - **Synthetic Data Generation**: Realistic customer behavioral dataset with 10,000+ samples
 - **Comprehensive EDA**: Statistical analysis and visualizations
 - **Advanced Feature Engineering**: Engagement scores, recency metrics, interaction features
@@ -19,6 +20,16 @@ This system analyzes historical customer behavioral data to identify users likel
 - **Robust Evaluation**: ROC-AUC, Precision-Recall curves, confusion matrices
 - **Model Interpretation**: SHAP values, feature importance, business insights
 - **Production Pipeline**: End-to-end prediction pipeline for new customers
+
+### 🌐 Web Interface (NEW!)
+- **Modern UI**: Dark theme with glassmorphism effects and vibrant gradients
+- **Drag & Drop Upload**: Easy CSV file upload with visual feedback
+- **Sample Data Generation**: Instantly generate test data for quick demos
+- **Model Selection**: Choose from 5 trained models with live performance metrics
+- **Real-time Predictions**: Get churn risk analysis in seconds
+- **Interactive Visualizations**: Beautiful charts with Chart.js
+- **Risk Categorization**: Automatic high/medium/low risk segmentation
+- **Download Results**: Export predictions as CSV files
 
 ## 🚀 Installation
 
@@ -46,7 +57,26 @@ pip install -r requirements.txt
 
 ## 📊 Usage
 
-### Quick Start - Run Full Pipeline
+### 🌐 Option 1: Web Interface (Recommended)
+
+The easiest way to use the system is through the modern web interface:
+
+```bash
+# Start the web server
+python web/app.py
+```
+
+Then open your browser to `http://localhost:5000`
+
+**Features:**
+- 📤 Drag and drop CSV files or generate sample data
+- 🤖 Select from 5 trained ML models
+- 📊 View interactive visualizations and risk analysis
+- 💾 Download prediction results as CSV
+
+See [web/README.md](web/README.md) for detailed web interface documentation.
+
+### 🖥️ Option 2: Command Line - Full Pipeline
 
 Run the complete end-to-end workflow:
 ```bash
@@ -73,17 +103,12 @@ python data_generator.py
 python exploratory_analysis.py
 ```
 
-**Preprocess Data**
-```bash
-python preprocessing.py
-```
-
 **Train Models**
 ```bash
 python main.py --mode train
 ```
 
-**Make Predictions**
+**Make Predictions (Python API)**
 ```python
 from pipeline import ChurnPredictionPipeline
 
@@ -113,6 +138,13 @@ customer-segmentation-project/
 │   ├── eda/                    # EDA visualizations
 │   ├── evaluation/             # Model performance plots
 │   └── interpretation/         # SHAP plots, feature importance
+├── web/                        # 🌐 Web Interface
+│   ├── app.py                  # Flask API server
+│   ├── static/                 # Frontend files
+│   │   ├── index.html          # Main page
+│   │   ├── css/styles.css      # Dark theme + glassmorphism
+│   │   └── js/app.js           # Interactive functionality
+│   └── README.md               # Web interface documentation
 ├── config.py                   # Configuration and parameters
 ├── utils.py                    # Utility functions
 ├── data_generator.py           # Synthetic data generation
@@ -190,7 +222,7 @@ python models/baseline_models.py
 
 ## 📝 Requirements
 
-Key dependencies:
+### Core ML Dependencies
 - scikit-learn >= 1.3.0
 - xgboost >= 2.0.0
 - lightgbm >= 4.0.0
@@ -200,6 +232,10 @@ Key dependencies:
 - seaborn >= 0.12.0
 - shap >= 0.42.0
 - imbalanced-learn >= 0.11.0
+
+### Web Interface Dependencies
+- flask >= 3.0.0
+- flask-cors >= 4.0.0
 
 See `requirements.txt` for complete list.
 
@@ -219,6 +255,31 @@ This project is created for educational purposes as part of the First Semester c
 
 ---
 
-**Project Status**: ✅ Complete and Ready for Deployment
+## 🌟 Highlights
 
-**Last Updated**: January 2026
+### 🎨 Modern Web Interface
+Beautiful, production-ready interface with:
+- Dark theme with purple-blue-pink gradients
+- Glassmorphism effects and smooth animations
+- Real-time predictions and interactive charts
+- Drag-and-drop file upload
+- Mobile-responsive design
+
+### 🤖 5 Machine Learning Models
+- Logistic Regression (baseline)
+- Decision Tree (interpretable)
+- Random Forest (ensemble)
+- XGBoost (best performance)
+- LightGBM (fast training)
+
+### 📊 Comprehensive Analysis
+- SHAP-based feature importance
+- Risk categorization (High/Medium/Low)
+- Interactive visualizations
+- Exportable results
+
+---
+
+**Project Status**: ✅ Complete with Web Interface
+
+**Last Updated**: February 2026

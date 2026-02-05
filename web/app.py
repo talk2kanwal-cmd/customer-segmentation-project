@@ -263,9 +263,9 @@ if __name__ == '__main__':
     print("\n" + "="*70)
     print(" "*15 + "CUSTOMER CHURN PREDICTION WEB INTERFACE")
     print("="*70)
-    print(f"\n🚀 Server starting on http://localhost:5000")
-    print(f"📊 Available models: {', '.join(AVAILABLE_MODELS)}")
-    print(f"📁 Static files: {Path(__file__).parent / 'static'}")
+    print(f"\n>> Server starting on http://localhost:5000")
+    print(f">> Available models: {', '.join(AVAILABLE_MODELS)}")
+    print(f">> Static files: {Path(__file__).parent / 'static'}")
     print("\n" + "="*70 + "\n")
     
     app.run(debug=True, host='0.0.0.0', port=5000)
