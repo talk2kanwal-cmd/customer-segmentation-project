@@ -591,3 +591,13 @@ dtype: int64
 2026-02-05 20:31:34,659 - utils - INFO - Creating interaction features
 2026-02-05 20:31:34,664 - utils - INFO - Creating behavioral change features
 2026-02-05 20:31:34,667 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-05 20:32:32,988 - utils - INFO - Starting full EDA pipeline
+2026-02-05 20:32:32,988 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:32:32,988 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:32:33,018 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:32:33,071 - utils - INFO - Analyzing churn distribution
+2026-02-05 20:32:33,547 - utils - INFO - Plotting numerical feature distributions
+2026-02-05 20:32:35,555 - utils - INFO - Plotting categorical feature distributions
+2026-02-05 20:32:36,226 - utils - INFO - Creating correlation heatmap
+2026-02-05 20:32:36,822 - utils - INFO - Performing statistical tests
+2026-02-05 20:32:36,869 - utils - INFO - EDA completed. Visualizations saved to f:\work\uet lahore\first semester\projects\customer-segmentation-project\outputs\eda
