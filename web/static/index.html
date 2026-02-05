@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer Churn Prediction System - AI-powered churn risk analysis and prediction">
+    <meta name="keywords" content="customer churn, machine learning, prediction, analytics, risk assessment">
+    <title>Customer Churn Prediction System</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Customer Churn Prediction System</h1>
+                <p class="hero-subtitle">AI-Powered Churn Risk Analysis & Prediction</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-models">5</div>
+                        <div class="stat-label">ML Models</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-accuracy">99.8%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="stat-predictions">0</div>
+                        <div class="stat-label">Predictions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Upload Section -->
+            <section class="section" id="upload-section">
+                <h2 class="section-title">Upload Customer Data</h2>
+                <p class="section-description">Upload a CSV file with customer data or generate sample data to get started</p>
+                
+                <div class="upload-card glass-card">
+                    <div class="upload-area" id="upload-area">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <h3 class="upload-title">Drag & Drop CSV File</h3>
+                        <p class="upload-text">or click to browse</p>
+                        <input type="file" id="file-input" accept=".csv" hidden>
+                    </div>
+                    
+                    <div class="upload-actions">
+                        <button class="btn btn-secondary" id="generate-sample-btn">
+                            Generate Sample Data
+                        </button>
+                    </div>
+                    
+                    <div class="file-info" id="file-info" style="display: none;">
+                        <div class="file-details">
+                            <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                <polyline points="13 2 13 9 20 9"></polyline>
+                            </svg>
+                            <div class="file-text">
+                                <div class="file-name" id="file-name">customers.csv</div>
+                                <div class="file-size" id="file-size">0 KB</div>
+                            </div>
+                        </div>
+                        <button class="btn-icon" id="clear-file-btn" title="Clear file">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Model Selection Section -->
+            <section class="section" id="model-section" style="display: none;">
+                <h2 class="section-title">Select Prediction Model</h2>
+                <p class="section-description">Choose a machine learning model to analyze churn risk</p>
+                
+                <div class="model-grid" id="model-grid">
+                    <!-- Model cards will be populated dynamically -->
+                </div>
+                
+                <div class="action-bar">
+                    <button class="btn btn-primary" id="predict-btn" disabled>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Predict Churn Risk
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="section" id="results-section" style="display: none;">
+                <h2 class="section-title">Prediction Results</h2>
+                <p class="section-description">Churn risk analysis and customer segmentation</p>
+                
+                <!-- Summary Cards -->
+                <div class="results-grid">
+                    <div class="result-card glass-card">
+                        <div class="result-icon risk-high">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-label">High Risk</div>
+                            <div class="result-value" id="high-risk-count">0</div>
+                            <div class="result-percent" id="high-risk-percent">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card glass-card">
+                        <div class="result-icon risk-medium">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-label">Medium Risk</div>
+                            <div class="result-value" id="medium-risk-count">0</div>
+                            <div class="result-percent" id="medium-risk-percent">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card glass-card">
+                        <div class="result-icon risk-low">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-label">Low Risk</div>
+                            <div class="result-value" id="low-risk-count">0</div>
+                            <div class="result-percent" id="low-risk-percent">0%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card glass-card">
+                        <div class="result-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-label">Avg. Churn Probability</div>
+                            <div class="result-value" id="avg-churn-prob">0%</div>
+                            <div class="result-percent" id="total-customers">0 customers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Distribution Chart -->
+                <div class="chart-container glass-card">
+                    <h3 class="chart-title">Risk Distribution</h3>
+                    <canvas id="risk-chart"></canvas>
+                </div>
+
+                <!-- Predictions Table -->
+                <div class="table-container glass-card">
+                    <div class="table-header">
+                        <h3 class="table-title">Customer Predictions</h3>
+                        <button class="btn btn-secondary btn-sm" id="download-results-btn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="8 10 12 14 16 10"></polyline>
+                                <line x1="12" y1="14" x2="12" y2="3"></line>
+                            </svg>
+                            Download CSV
+                        </button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table" id="predictions-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>Churn Probability</th>
+                                    <th>Predicted Churn</th>
+                                    <th>Risk Category</th>
+                                </tr>
+                            </thead>
+                            <tbody id="predictions-table-body">
+                                <!-- Rows will be populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Model Comparison Section -->
+            <section class="section" id="comparison-section">
+                <h2 class="section-title">Model Performance Comparison</h2>
+                <p class="section-description">Compare accuracy metrics across all trained models</p>
+                
+                <div class="chart-container glass-card">
+                    <canvas id="comparison-chart"></canvas>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Processing predictions...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="/js/app.js"></script>
+</body>
+</html>
