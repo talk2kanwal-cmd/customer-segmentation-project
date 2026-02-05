@@ -140,10 +140,11 @@ def predict():
                 'error': 'No data provided. Please upload a CSV file or send JSON data.'
             }), 400
         
-        # Validate required columns
-        required_cols = ['tenure_days', 'monthly_charges', 'total_charges', 'num_logins', 
-                        'num_transactions', 'num_support_tickets', 'payment_failures',
-                        'subscription_tier', 'age_group', 'region']
+        # Validate required columns (raw data format)
+        required_cols = ['tenure_months', 'subscription_tier', 'age_group', 'region', 
+                        'login_frequency', 'session_duration', 'feature_usage_count', 
+                        'days_since_last_login', 'support_tickets', 'payment_failures', 
+                        'discount_usage', 'referrals_made']
         
         missing_cols = [col for col in required_cols if col not in df.columns]
         

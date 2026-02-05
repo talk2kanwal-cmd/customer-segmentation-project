@@ -143,6 +143,8 @@ function handleFileSelect(e) {
 }
 
 async function processFile(file) {
+    console.log('processFile: Starting with file:', file.name);
+
     // Validate file type
     if (!file.name.endsWith('.csv')) {
         showToast('Please upload a CSV file', 'error');
@@ -158,6 +160,8 @@ async function processFile(file) {
     const text = await file.text();
     const rows = text.split('\n').filter(row => row.trim());
 
+    console.log('processFile: File has', rows.length - 1, 'customers');
+
     showToast(`File uploaded: ${rows.length - 1} customers`, 'success');
 
     // Store file
@@ -166,6 +170,8 @@ async function processFile(file) {
     // Show model selection
     elements.modelSection.style.display = 'block';
     elements.modelSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    console.log('processFile: Completed successfully');
 }
 
 function clearFile() {
@@ -178,32 +184,54 @@ function clearFile() {
 
 // === SAMPLE DATA GENERATION ===
 async function generateSampleData() {
+    console.log('[SAMPLE DATA] Starting generation...');
     showLoading('Generating sample data...');
 
     try {
+        console.log('[SAMPLE DATA] Calling API endpoint...');
         const response = await API.post('/api/generate-sample', {
             n_samples: 100,
             churn_rate: 0.23
         });
 
+        console.log('[SAMPLE DATA] API Response:', response);
+
         if (response.success) {
+            console.log('[SAMPLE DATA] Success! Data count:', response.count);
+            console.log('[SAMPLE DATA] Sample data (first record):', response.data[0]);
+
             // Convert to CSV
+            console.log('[SAMPLE DATA] Converting to CSV...');
             const csv = jsonToCSV(response.data);
+            console.log('[SAMPLE DATA] CSV length:', csv.length, 'bytes');
+            console.log('[SAMPLE DATA] CSV preview:', csv.substring(0, 200));
+
+            console.log('[SAMPLE DATA] Creating blob...');
             const blob = new Blob([csv], { type: 'text/csv' });
+            console.log('[SAMPLE DATA] Blob created, size:', blob.size);
+
+            console.log('[SAMPLE DATA] Creating file object...');
             const file = new File([blob], 'sample_customers.csv', { type: 'text/csv' });
+            console.log('[SAMPLE DATA] File created:', file.name, file.size, 'bytes');
 
             // Process as uploaded file (must await)
+            console.log('[SAMPLE DATA] Processing file...');
             await processFile(file);
+            console.log('[SAMPLE DATA] File processing complete!');
 
             showToast(`Generated ${response.count} sample customers`, 'success');
         } else {
+            console.error('[SAMPLE DATA] API returned error:', response.error);
             showToast(response.error || 'Failed to generate sample data', 'error');
         }
     } catch (error) {
-        console.error('Error generating sample:', error);
-        showToast('Error generating sample data', 'error');
+        console.error('[SAMPLE DATA] ERROR:', error);
+        console.error('[SAMPLE DATA] Error message:', error.message);
+        console.error('[SAMPLE DATA] Error stack:', error.stack);
+        showToast(`Error: ${error.message}`, 'error');
     } finally {
         hideLoading();
+        console.log('[SAMPLE DATA] Function complete');
     }
 }
 
@@ -587,9 +615,16 @@ function formatFileSize(bytes) {
 }
 
 function jsonToCSV(data) {
-    if (!data || data.length === 0) return '';
+    console.log('[jsonToCSV] Converting', data.length, 'records to CSV');
+
+    if (!data || data.length === 0) {
+        console.error('[jsonToCSV] No data provided!');
+        return '';
+    }
 
     const headers = Object.keys(data[0]);
+    console.log('[jsonToCSV] Headers:', headers);
+
     const rows = data.map(obj =>
         headers.map(header => {
             const value = obj[header];
@@ -599,7 +634,10 @@ function jsonToCSV(data) {
         }).join(',')
     );
 
-    return [headers.join(','), ...rows].join('\n');
+    const csv = [headers.join(','), ...rows].join('\n');
+    console.log('[jsonToCSV] Created CSV with', rows.length, 'data rows');
+
+    return csv;
 }
 
 // === START APPLICATION ===

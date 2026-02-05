@@ -750,3 +750,220 @@ dtype: int64
 2026-02-05 20:53:52,851 - utils - INFO - Actual churn rate: 23.00%
 2026-02-05 20:53:52,855 - utils - INFO - Missing values: 5
 2026-02-05 20:53:52,885 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:53:52] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:57:51,492 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:57:51,502 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:57:51,521 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:57:51,522 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:57:51,526 - utils - INFO - Missing values: 5
+2026-02-05 20:57:51,569 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:57:51] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:58:05,117 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:58:05] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 20:58:12,904 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:58:12] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 20:58:21,104 - utils - INFO - Generating 100 sample customers
+2026-02-05 20:58:21,106 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:58:21,111 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:58:21,111 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:58:21,112 - utils - INFO - Missing values: 5
+2026-02-05 20:58:21,122 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:58:21] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 20:58:34,478 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:58:34] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 20:59:28,241 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:59:28] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 20:59:31,229 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 20:59:31] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:00:17,742 - utils - INFO - Generating 100 sample customers
+2026-02-05 21:00:17,745 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 21:00:17,752 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 21:00:17,752 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:00:17,753 - utils - INFO - Missing values: 2
+2026-02-05 21:00:17,763 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:00:17] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 21:00:19,265 - utils - INFO - Generating 100 sample customers
+2026-02-05 21:00:19,269 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 21:00:19,284 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 21:00:19,286 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:00:19,288 - utils - INFO - Missing values: 5
+2026-02-05 21:00:19,315 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:00:19] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 21:00:22,895 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:00:22] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:04:45,658 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:45] "GET / HTTP/1.1" 200 -
+2026-02-05 21:04:45,711 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:45] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 21:04:45,919 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:45] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 21:04:46,887 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:46] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 21:04:47,338 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:47] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 21:04:47,855 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:04:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 21:05:30,140 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:05:30] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:05:43,772 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:05:43] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:08:16,606 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:08:16,608 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:08:16,608 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:08:20,457 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:08:20,511 - utils - INFO - Loaded scaler
+2026-02-05 21:08:20,512 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:08:20,512 - utils - INFO - Preprocessing input data
+2026-02-05 21:08:20,513 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:08:20,513 - utils - INFO - Creating engagement score
+2026-02-05 21:08:20,514 - utils - ERROR - Error making predictions: 'login_frequency'
+2026-02-05 21:08:20,517 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:08:20] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:09:21,922 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:21] "GET / HTTP/1.1" 200 -
+2026-02-05 21:09:21,985 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:21] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 21:09:22,176 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:22] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 21:09:23,269 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:23] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 21:09:23,480 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:23] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 21:09:23,851 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 21:09:41,095 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:41] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:09:51,826 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:09:51] "[31m[1mPOST /api/predict HTTP/1.1[0m" 400 -
+2026-02-05 21:10:37,161 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\web\\app.py', reloading
+2026-02-05 21:10:37,745 - werkzeug - INFO -  * Restarting with stat
+2026-02-05 21:10:41,178 - werkzeug - WARNING -  * Debugger is active!
+2026-02-05 21:10:41,183 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-05 21:12:03,959 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:03] "GET / HTTP/1.1" 200 -
+2026-02-05 21:12:04,018 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:04] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 21:12:04,021 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:04] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 21:12:04,589 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:04] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 21:12:04,780 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 21:12:04,828 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:04] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 21:12:18,072 - utils - INFO - Making predictions using decision_tree
+2026-02-05 21:12:18,073 - utils - INFO - Loading decision_tree model
+2026-02-05 21:12:18,074 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-05 21:12:20,059 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:12:20,062 - utils - INFO - Loaded scaler
+2026-02-05 21:12:20,062 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:12:20,062 - utils - INFO - Preprocessing input data
+2026-02-05 21:12:20,063 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:12:20,063 - utils - INFO - Creating engagement score
+2026-02-05 21:12:20,066 - utils - INFO - Creating recency features
+2026-02-05 21:12:20,067 - utils - INFO - Creating frequency features
+2026-02-05 21:12:20,071 - utils - INFO - Creating interaction features
+2026-02-05 21:12:20,076 - utils - INFO - Creating behavioral change features
+2026-02-05 21:12:20,086 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:12:20,113 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:12:20,116 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:20] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:12:50,191 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:50] "GET / HTTP/1.1" 200 -
+2026-02-05 21:12:50,225 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:50] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-05 21:12:50,430 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:50] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 21:12:51,086 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:51] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 21:12:51,257 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-05 21:12:51,478 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:12:51] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 21:13:03,903 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:13:03,905 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:13:03,905 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:13:03,910 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:13:03,913 - utils - INFO - Loaded scaler
+2026-02-05 21:13:03,914 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:13:03,916 - utils - INFO - Preprocessing input data
+2026-02-05 21:13:03,916 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:13:03,917 - utils - INFO - Creating engagement score
+2026-02-05 21:13:03,921 - utils - INFO - Creating recency features
+2026-02-05 21:13:03,927 - utils - INFO - Creating frequency features
+2026-02-05 21:13:03,933 - utils - INFO - Creating interaction features
+2026-02-05 21:13:03,936 - utils - INFO - Creating behavioral change features
+2026-02-05 21:13:03,944 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:13:03,964 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:13:03,966 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:03] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:13:08,285 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:13:08,286 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:13:08,287 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:13:08,289 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:13:08,291 - utils - INFO - Loaded scaler
+2026-02-05 21:13:08,292 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:13:08,294 - utils - INFO - Preprocessing input data
+2026-02-05 21:13:08,294 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:13:08,295 - utils - INFO - Creating engagement score
+2026-02-05 21:13:08,297 - utils - INFO - Creating recency features
+2026-02-05 21:13:08,298 - utils - INFO - Creating frequency features
+2026-02-05 21:13:08,299 - utils - INFO - Creating interaction features
+2026-02-05 21:13:08,300 - utils - INFO - Creating behavioral change features
+2026-02-05 21:13:08,302 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:13:08,310 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:13:08,311 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:08] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:13:12,657 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:13:12,659 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:13:12,660 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:13:12,663 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:13:12,665 - utils - INFO - Loaded scaler
+2026-02-05 21:13:12,665 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:13:12,666 - utils - INFO - Preprocessing input data
+2026-02-05 21:13:12,667 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:13:12,668 - utils - INFO - Creating engagement score
+2026-02-05 21:13:12,672 - utils - INFO - Creating recency features
+2026-02-05 21:13:12,679 - utils - INFO - Creating frequency features
+2026-02-05 21:13:12,686 - utils - INFO - Creating interaction features
+2026-02-05 21:13:12,691 - utils - INFO - Creating behavioral change features
+2026-02-05 21:13:12,698 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:13:12,715 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:13:12,717 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:12] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:13:16,752 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:13:16,754 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:13:16,755 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:13:16,757 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:13:16,759 - utils - INFO - Loaded scaler
+2026-02-05 21:13:16,759 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:13:16,759 - utils - INFO - Preprocessing input data
+2026-02-05 21:13:16,759 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:13:16,759 - utils - INFO - Creating engagement score
+2026-02-05 21:13:16,760 - utils - INFO - Creating recency features
+2026-02-05 21:13:16,761 - utils - INFO - Creating frequency features
+2026-02-05 21:13:16,763 - utils - INFO - Creating interaction features
+2026-02-05 21:13:16,764 - utils - INFO - Creating behavioral change features
+2026-02-05 21:13:16,769 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:13:16,783 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:13:16,784 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:16] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:13:22,802 - utils - INFO - Making predictions using logistic_regression
+2026-02-05 21:13:22,804 - utils - INFO - Loading logistic_regression model
+2026-02-05 21:13:22,805 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-05 21:13:22,807 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 21:13:22,808 - utils - INFO - Loaded scaler
+2026-02-05 21:13:22,808 - utils - INFO - Making predictions for 10 customers
+2026-02-05 21:13:22,808 - utils - INFO - Preprocessing input data
+2026-02-05 21:13:22,809 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 21:13:22,810 - utils - INFO - Creating engagement score
+2026-02-05 21:13:22,817 - utils - INFO - Creating recency features
+2026-02-05 21:13:22,819 - utils - INFO - Creating frequency features
+2026-02-05 21:13:22,825 - utils - INFO - Creating interaction features
+2026-02-05 21:13:22,833 - utils - INFO - Creating behavioral change features
+2026-02-05 21:13:22,841 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-05 21:13:22,858 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-05 21:13:22,861 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:22] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
