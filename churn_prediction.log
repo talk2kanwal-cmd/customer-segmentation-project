@@ -391,3 +391,203 @@ dtype: int64
 2026-01-25 22:56:48,380 - utils - INFO - After SMOTE - Class distribution: {np.int64(0): np.int64(782), np.int64(1): np.int64(782)}
 2026-01-25 22:56:48,380 - utils - INFO - Computing class weights
 2026-01-25 22:56:48,380 - utils - INFO - Class weights: {np.int64(0): np.float64(0.639386189258312), np.int64(1): np.float64(2.293577981651376)}
+2026-02-05 20:28:26,395 - utils - INFO - Applying SMOTE for class balancing
+2026-02-05 20:28:26,396 - utils - INFO - Before SMOTE - Class distribution: {np.int64(0): np.int64(782), np.int64(1): np.int64(218)}
+2026-02-05 20:28:26,413 - utils - INFO - After SMOTE - Class distribution: {np.int64(0): np.int64(782), np.int64(1): np.int64(782)}
+2026-02-05 20:28:26,416 - utils - INFO - Computing class weights
+2026-02-05 20:28:26,421 - utils - INFO - Class weights: {np.int64(0): np.float64(0.639386189258312), np.int64(1): np.float64(2.293577981651376)}
+2026-02-05 20:28:30,454 - utils - INFO - Applying SMOTE for class balancing
+2026-02-05 20:28:30,455 - utils - INFO - Before SMOTE - Class distribution: {np.int64(0): np.int64(782), np.int64(1): np.int64(218)}
+2026-02-05 20:28:30,459 - utils - INFO - After SMOTE - Class distribution: {np.int64(0): np.int64(782), np.int64(1): np.int64(782)}
+2026-02-05 20:28:30,461 - utils - INFO - Computing class weights
+2026-02-05 20:28:30,463 - utils - INFO - Class weights: {np.int64(0): np.float64(0.639386189258312), np.int64(1): np.float64(2.293577981651376)}
+2026-02-05 20:29:02,095 - utils - INFO - ============================================================
+2026-02-05 20:29:02,096 - utils - INFO - STEP 1: DATA GENERATION
+2026-02-05 20:29:02,096 - utils - INFO - ============================================================
+2026-02-05 20:29:02,097 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-02-05 20:29:02,188 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-02-05 20:29:02,194 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:29:02,198 - utils - INFO - Missing values: 611
+2026-02-05 20:29:02,200 - utils - INFO - 
+============================================================
+2026-02-05 20:29:02,200 - utils - INFO - STEP 2: EXPLORATORY DATA ANALYSIS
+2026-02-05 20:29:02,201 - utils - INFO - ============================================================
+2026-02-05 20:29:02,203 - utils - INFO - Starting full EDA pipeline
+2026-02-05 20:29:02,203 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:02,204 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:02,278 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:29:02,366 - utils - INFO - Analyzing churn distribution
+2026-02-05 20:29:04,319 - utils - INFO - Plotting numerical feature distributions
+2026-02-05 20:29:06,610 - utils - INFO - Plotting categorical feature distributions
+2026-02-05 20:29:07,392 - utils - INFO - Creating correlation heatmap
+2026-02-05 20:29:08,132 - utils - INFO - Performing statistical tests
+2026-02-05 20:29:08,201 - utils - INFO - EDA completed. Visualizations saved to f:\work\uet lahore\first semester\projects\customer-segmentation-project\outputs\eda
+2026-02-05 20:29:08,206 - utils - INFO - 
+============================================================
+2026-02-05 20:29:08,207 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-02-05 20:29:08,207 - utils - INFO - ============================================================
+2026-02-05 20:29:08,209 - utils - INFO - Starting preprocessing pipeline
+2026-02-05 20:29:08,210 - utils - INFO - Loading raw data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:08,210 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:08,248 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:29:08,249 - utils - INFO - Handling missing values
+2026-02-05 20:29:08,254 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-05 20:29:08,257 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-05 20:29:08,259 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-05 20:29:08,270 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-05 20:29:08,275 - utils - INFO - Encoding categorical features
+2026-02-05 20:29:08,282 - utils - INFO - Encoded 3 categorical columns
+2026-02-05 20:29:08,285 - utils - INFO - Splitting data into train/val/test sets
+2026-02-05 20:29:08,330 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-05 20:29:08,331 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-05 20:29:08,332 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-05 20:29:08,333 - utils - INFO - Train churn rate: 23.00%
+2026-02-05 20:29:08,333 - utils - INFO - Val churn rate: 23.00%
+2026-02-05 20:29:08,334 - utils - INFO - Test churn rate: 23.00%
+2026-02-05 20:29:08,559 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-05 20:29:08,614 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-05 20:29:08,674 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-05 20:29:08,677 - utils - INFO - Saved model to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 20:29:08,677 - utils - INFO - Saved processed data and scaler
+2026-02-05 20:29:08,678 - utils - INFO - Preprocessing pipeline completed
+2026-02-05 20:29:08,681 - utils - INFO - 
+============================================================
+2026-02-05 20:29:08,682 - utils - INFO - STEP 4: MODEL TRAINING
+2026-02-05 20:29:08,683 - utils - INFO - ============================================================
+2026-02-05 20:29:08,684 - utils - INFO - Training all baseline models
+2026-02-05 20:29:08,684 - utils - INFO - Training Logistic Regression
+2026-02-05 20:29:37,945 - utils - INFO - Loading and preprocessing data
+2026-02-05 20:29:37,946 - utils - INFO - Starting preprocessing pipeline
+2026-02-05 20:29:37,946 - utils - INFO - Loading raw data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:37,947 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:29:37,970 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:29:37,971 - utils - INFO - Handling missing values
+2026-02-05 20:29:37,977 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-05 20:29:37,982 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-05 20:29:37,986 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-05 20:29:38,060 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-05 20:29:38,087 - utils - INFO - Encoding categorical features
+2026-02-05 20:29:38,107 - utils - INFO - Encoded 3 categorical columns
+2026-02-05 20:29:38,118 - utils - INFO - Splitting data into train/val/test sets
+2026-02-05 20:29:38,141 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-05 20:29:38,141 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-05 20:29:38,142 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-05 20:29:38,143 - utils - INFO - Train churn rate: 23.00%
+2026-02-05 20:29:38,144 - utils - INFO - Val churn rate: 23.00%
+2026-02-05 20:29:38,145 - utils - INFO - Test churn rate: 23.00%
+2026-02-05 20:29:38,446 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-05 20:29:38,502 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-05 20:29:38,566 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-05 20:29:38,568 - utils - INFO - Saved model to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 20:29:38,569 - utils - INFO - Saved processed data and scaler
+2026-02-05 20:29:38,569 - utils - INFO - Preprocessing pipeline completed
+2026-02-05 20:29:38,570 - utils - INFO - Training Random Forest for interpretation
+2026-02-05 20:29:38,571 - utils - INFO - Training Random Forest
+2026-02-05 20:29:39,318 - utils - INFO - Random Forest training completed
+2026-02-05 20:29:40,230 - utils - INFO - Calculating SHAP values for tree model
+2026-02-05 20:29:40,231 - utils - INFO - Sampling 500 instances for SHAP calculation
+2026-02-05 20:29:41,802 - utils - INFO - SHAP values calculated successfully
+2026-02-05 20:30:18,362 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-02-05 20:30:18,382 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-02-05 20:30:18,382 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:30:18,385 - utils - INFO - Missing values: 611
+2026-02-05 20:30:18,447 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:30:18,566 - utils - INFO - Data generation completed successfully
+2026-02-05 20:30:28,795 - utils - INFO - Optimal threshold: 0.35
+2026-02-05 20:30:28,795 - utils - INFO - Minimum cost: 3070.00
+2026-02-05 20:30:53,196 - utils - INFO - Generating 1000 customer records with 23.0% churn rate
+2026-02-05 20:30:53,202 - utils - INFO - Generated dataset shape: (1000, 14)
+2026-02-05 20:30:53,203 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:30:53,207 - utils - INFO - Missing values: 51
+2026-02-05 20:30:53,208 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 20:30:53,210 - utils - INFO - Creating engagement score
+2026-02-05 20:30:53,213 - utils - INFO - Creating recency features
+2026-02-05 20:30:53,215 - utils - INFO - Creating frequency features
+2026-02-05 20:30:53,220 - utils - INFO - Creating interaction features
+2026-02-05 20:30:53,222 - utils - INFO - Creating behavioral change features
+2026-02-05 20:30:53,226 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-05 20:31:18,615 - utils - INFO - ============================================================
+2026-02-05 20:31:18,615 - utils - INFO - STEP 1: DATA GENERATION
+2026-02-05 20:31:18,615 - utils - INFO - ============================================================
+2026-02-05 20:31:18,616 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-02-05 20:31:18,640 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-02-05 20:31:18,641 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:31:18,647 - utils - INFO - Missing values: 611
+2026-02-05 20:31:18,651 - utils - INFO - 
+============================================================
+2026-02-05 20:31:18,653 - utils - INFO - STEP 2: EXPLORATORY DATA ANALYSIS
+2026-02-05 20:31:18,654 - utils - INFO - ============================================================
+2026-02-05 20:31:18,655 - utils - INFO - Starting full EDA pipeline
+2026-02-05 20:31:18,656 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:31:18,657 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:31:18,714 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:31:18,764 - utils - INFO - Analyzing churn distribution
+2026-02-05 20:31:19,272 - utils - INFO - Plotting numerical feature distributions
+2026-02-05 20:31:21,589 - utils - INFO - Plotting categorical feature distributions
+2026-02-05 20:31:22,631 - utils - INFO - Creating correlation heatmap
+2026-02-05 20:31:23,611 - utils - INFO - Performing statistical tests
+2026-02-05 20:31:23,679 - utils - INFO - EDA completed. Visualizations saved to f:\work\uet lahore\first semester\projects\customer-segmentation-project\outputs\eda
+2026-02-05 20:31:23,681 - utils - INFO - 
+============================================================
+2026-02-05 20:31:23,682 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-02-05 20:31:23,682 - utils - INFO - ============================================================
+2026-02-05 20:31:23,684 - utils - INFO - Starting preprocessing pipeline
+2026-02-05 20:31:23,685 - utils - INFO - Loading raw data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:31:23,687 - utils - INFO - Loading data from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 20:31:23,726 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-05 20:31:23,727 - utils - INFO - Handling missing values
+2026-02-05 20:31:23,731 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-05 20:31:23,738 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-05 20:31:23,742 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-05 20:31:23,746 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-05 20:31:23,751 - utils - INFO - Encoding categorical features
+2026-02-05 20:31:23,761 - utils - INFO - Encoded 3 categorical columns
+2026-02-05 20:31:23,762 - utils - INFO - Splitting data into train/val/test sets
+2026-02-05 20:31:23,791 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-05 20:31:23,791 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-05 20:31:23,792 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-05 20:31:23,792 - utils - INFO - Train churn rate: 23.00%
+2026-02-05 20:31:23,793 - utils - INFO - Val churn rate: 23.00%
+2026-02-05 20:31:23,793 - utils - INFO - Test churn rate: 23.00%
+2026-02-05 20:31:24,082 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-05 20:31:24,172 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-05 20:31:24,262 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-05 20:31:24,264 - utils - INFO - Saved model to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 20:31:24,264 - utils - INFO - Saved processed data and scaler
+2026-02-05 20:31:24,265 - utils - INFO - Preprocessing pipeline completed
+2026-02-05 20:31:24,269 - utils - INFO - 
+============================================================
+2026-02-05 20:31:24,271 - utils - INFO - STEP 4: MODEL TRAINING
+2026-02-05 20:31:24,271 - utils - INFO - ============================================================
+2026-02-05 20:31:24,273 - utils - INFO - Training all baseline models
+2026-02-05 20:31:24,275 - utils - INFO - Training Logistic Regression
+2026-02-05 20:31:34,100 - utils - INFO - Generating sample customer data
+2026-02-05 20:31:34,101 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 20:31:34,106 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 20:31:34,107 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 20:31:34,108 - utils - INFO - Missing values: 8
+2026-02-05 20:31:34,109 - utils - INFO - Loading xgboost model
+2026-02-05 20:31:34,110 - utils - INFO - Loading model from f:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-05 20:31:34,527 - utils - INFO - Loading model from f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-05 20:31:34,646 - utils - INFO - Loaded scaler
+2026-02-05 20:31:34,649 - utils - INFO - Making predictions for 100 customers
+2026-02-05 20:31:34,650 - utils - INFO - Preprocessing input data
+2026-02-05 20:31:34,651 - utils - INFO - Starting feature engineering pipeline
+2026-02-05 20:31:34,651 - utils - INFO - Creating engagement score
+2026-02-05 20:31:34,654 - utils - INFO - Creating recency features
+2026-02-05 20:31:34,656 - utils - INFO - Creating frequency features
+2026-02-05 20:31:34,659 - utils - INFO - Creating interaction features
+2026-02-05 20:31:34,664 - utils - INFO - Creating behavioral change features
+2026-02-05 20:31:34,667 - utils - INFO - Feature engineering completed. Total features: 25
