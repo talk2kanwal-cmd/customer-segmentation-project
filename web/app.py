@@ -215,6 +215,9 @@ def generate_sample():
         # Remove the churned column for prediction
         if 'churned' in df.columns:
             df = df.drop(columns=['churned'])
+            
+        # Replace NaNs with None for valid JSON serialization
+        df = df.where(pd.notnull(df), None)
         
         return jsonify({
             'success': True,

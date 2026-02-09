@@ -967,3 +967,163 @@ Feature names unseen at fit time:
 - ...
 
 2026-02-05 21:13:22,861 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:13:22] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-05 21:29:59,087 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:29:59] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 21:29:59,134 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:29:59] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 21:29:59,368 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:29:59] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 21:30:00,328 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:30:00] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 21:30:01,109 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:30:01] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 21:30:11,858 - utils - INFO - Generating 100 sample customers
+2026-02-05 21:30:11,871 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 21:30:11,894 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 21:30:11,895 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:30:11,901 - utils - INFO - Missing values: 6
+2026-02-05 21:30:11,952 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:30:11] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 21:30:17,114 - utils - INFO - Generating 100 sample customers
+2026-02-05 21:30:17,118 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 21:30:17,126 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 21:30:17,127 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:30:17,130 - utils - INFO - Missing values: 5
+2026-02-05 21:30:17,144 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 21:30:17] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 21:37:18,032 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-02-05 21:37:18,155 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-02-05 21:37:18,161 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:37:18,164 - utils - INFO - Missing values: 611
+2026-02-05 21:37:18,291 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 21:37:18,327 - utils - INFO - Data generation completed successfully
+2026-02-05 21:37:22,683 - utils - INFO - Generating 10000 customer records with 23.0% churn rate
+2026-02-05 21:37:22,700 - utils - INFO - Generated dataset shape: (10000, 14)
+2026-02-05 21:37:22,701 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 21:37:22,705 - utils - INFO - Missing values: 611
+2026-02-05 21:37:22,776 - utils - INFO - Saved data to f:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-05 21:37:22,783 - utils - INFO - Data generation completed successfully
+2026-02-05 23:12:27,281 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:27] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 23:12:27,343 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:27] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 23:12:27,521 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:27] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 23:12:28,261 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:28] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 23:12:28,794 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:28] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 23:12:36,973 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:12:36,980 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:12:37,022 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:12:37,027 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:12:37,040 - utils - INFO - Missing values: 5
+2026-02-05 23:12:37,115 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:37] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:12:38,554 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:12:38,559 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:12:38,570 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:12:38,570 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:12:38,574 - utils - INFO - Missing values: 6
+2026-02-05 23:12:38,595 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:38] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:12:39,646 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:12:39,654 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:12:39,715 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:12:39,715 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:12:39,723 - utils - INFO - Missing values: 4
+2026-02-05 23:12:39,790 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:12:39] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:13:15,314 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:13:15,314 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:13:15,332 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:13:15,332 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:13:15,332 - utils - INFO - Missing values: 7
+2026-02-05 23:13:15,354 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:13:15] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:14:20,456 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\web\\app.py', reloading
+2026-02-05 23:14:21,703 - werkzeug - INFO -  * Restarting with stat
+2026-02-05 23:14:27,024 - werkzeug - WARNING -  * Debugger is active!
+2026-02-05 23:14:27,037 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-05 23:16:19,875 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:19] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 23:16:19,923 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:19] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 23:16:20,004 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:20] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 23:16:21,186 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:21] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 23:16:21,769 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:21] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 23:16:24,739 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:16:24,739 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:16:24,759 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:16:24,759 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:16:24,763 - utils - INFO - Missing values: 5
+2026-02-05 23:16:24,866 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:24] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:16:26,469 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:16:26,472 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:16:26,484 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:16:26,484 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:16:26,486 - utils - INFO - Missing values: 5
+2026-02-05 23:16:26,509 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:26] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:16:32,235 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:16:32,235 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:16:32,267 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:16:32,275 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:16:32,283 - utils - INFO - Missing values: 5
+2026-02-05 23:16:32,411 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:16:32] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:20:07,129 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 23:20:07,132 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 23:20:07,492 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 23:20:07,555 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-05 23:20:07,882 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-05 23:20:07,885 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:07] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-05 23:20:08,064 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:08] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 23:20:08,433 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:08] "GET /api/models HTTP/1.1" 200 -
+2026-02-05 23:20:08,720 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:08] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 23:20:08,751 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:08] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-05 23:20:14,482 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:20:14,484 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:20:14,492 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:20:14,492 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:20:14,494 - utils - INFO - Missing values: 8
+2026-02-05 23:20:14,514 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:14] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-05 23:20:15,879 - utils - INFO - Generating 100 sample customers
+2026-02-05 23:20:15,889 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-05 23:20:15,911 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-05 23:20:15,913 - utils - INFO - Actual churn rate: 23.00%
+2026-02-05 23:20:15,919 - utils - INFO - Missing values: 7
+2026-02-05 23:20:15,989 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2026 23:20:15] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-09 13:50:25,506 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:25] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-09 13:50:25,649 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:25] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 13:50:25,793 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:25] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-09 13:50:26,705 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:26] "GET /api/models HTTP/1.1" 200 -
+2026-02-09 13:50:27,368 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:27] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-09 13:50:41,920 - utils - INFO - Making predictions using logistic_regression
+2026-02-09 13:50:41,928 - utils - INFO - Loading logistic_regression model
+2026-02-09 13:50:41,928 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-09 13:50:43,569 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-09 13:50:43,681 - utils - INFO - Loaded scaler
+2026-02-09 13:50:43,681 - utils - INFO - Making predictions for 10 customers
+2026-02-09 13:50:43,681 - utils - INFO - Preprocessing input data
+2026-02-09 13:50:43,681 - utils - INFO - Starting feature engineering pipeline
+2026-02-09 13:50:43,689 - utils - INFO - Creating engagement score
+2026-02-09 13:50:43,697 - utils - INFO - Creating recency features
+2026-02-09 13:50:43,697 - utils - INFO - Creating frequency features
+2026-02-09 13:50:43,705 - utils - INFO - Creating interaction features
+2026-02-09 13:50:43,713 - utils - INFO - Creating behavioral change features
+2026-02-09 13:50:43,729 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-09 13:50:43,801 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-09 13:50:43,809 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:43] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-09 13:50:49,513 - utils - INFO - Making predictions using logistic_regression
+2026-02-09 13:50:49,513 - utils - INFO - Loading logistic_regression model
+2026-02-09 13:50:49,513 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-09 13:50:49,513 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-09 13:50:49,521 - utils - INFO - Loaded scaler
+2026-02-09 13:50:49,521 - utils - INFO - Making predictions for 10 customers
+2026-02-09 13:50:49,521 - utils - INFO - Preprocessing input data
+2026-02-09 13:50:49,521 - utils - INFO - Starting feature engineering pipeline
+2026-02-09 13:50:49,521 - utils - INFO - Creating engagement score
+2026-02-09 13:50:49,521 - utils - INFO - Creating recency features
+2026-02-09 13:50:49,521 - utils - INFO - Creating frequency features
+2026-02-09 13:50:49,529 - utils - INFO - Creating interaction features
+2026-02-09 13:50:49,537 - utils - INFO - Creating behavioral change features
+2026-02-09 13:50:49,545 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-09 13:50:49,561 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-09 13:50:49,569 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:49] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
