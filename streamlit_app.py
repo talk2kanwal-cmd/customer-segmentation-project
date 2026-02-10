@@ -1,3 +1,54 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+from pathlib import Path
+import sys
+
+# Add project root to path
+sys.path.append(str(Path(__file__).parent))
+
+from pipeline import ChurnPredictionPipeline
+from data_generator import generate_customer_data
+from config import SAVED_MODELS_DIR
+
+# Page config
+st.set_page_config(
+    page_title="Churn Predictor",
+    page_icon="🔮",
+    layout="wide"
+)
+
+# Custom CSS for styling
+st.markdown("""
+<style>
+    .main {
+        background-color: #0e1117;
+    }
+    .stMetric {
+        background-color: #1e2130;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #3e4150;
+    }
+    /* Metric text visibility */
+    [data-testid="stMetricLabel"] {
+        color: #94a3b8 !important;
+    }
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+    }
+    /* Button text visibility */
+    .stButton > button {
+        color: #ffffff !important;
+    }
+    /* Tab text visibility */
+    .stTabs [data-baseweb="tab"] {
+        color: #ffffff !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # Title and Description
 st.title("🔮 Customer Churn Prediction Dashboard")

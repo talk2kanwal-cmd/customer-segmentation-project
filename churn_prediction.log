@@ -2056,3 +2056,7 @@ dtype: int64
 2026-02-10 13:51:08,916 - werkzeug - INFO -  * Restarting with stat
 2026-02-10 13:51:13,171 - werkzeug - WARNING -  * Debugger is active!
 2026-02-10 13:51:13,175 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 13:51:37,581 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\streamlit_app.py', reloading
+2026-02-10 13:51:37,890 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 13:51:42,629 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 13:51:42,654 - werkzeug - INFO -  * Debugger PIN: 105-297-698
