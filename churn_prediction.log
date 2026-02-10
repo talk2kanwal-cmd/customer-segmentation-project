@@ -2001,3 +2001,46 @@ dtype: int64
 2026-02-10 13:11:39,735 - utils - INFO - Aligned input features with training set
 2026-02-10 13:11:43,152 - utils - INFO - Predictions completed
 2026-02-10 13:11:43,465 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:11:43] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:47:14,528 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:14] "GET / HTTP/1.1" 200 -
+2026-02-10 13:47:14,609 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:14] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-10 13:47:14,623 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:14] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-10 13:47:15,220 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:15] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 13:47:15,467 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:15] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 13:47:15,721 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 13:47:17,695 - utils - INFO - Generating 100 sample customers
+2026-02-10 13:47:17,697 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 13:47:17,707 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 13:47:17,708 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 13:47:17,710 - utils - INFO - Missing values: 5
+2026-02-10 13:47:17,715 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:17] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 13:47:22,614 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 13:47:22,615 - utils - INFO - Loading logistic_regression model
+2026-02-10 13:47:22,615 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 13:47:22,621 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:47:22,623 - utils - INFO - Loaded scaler
+2026-02-10 13:47:22,624 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:47:22,624 - utils - INFO - Making predictions for 100 customers
+2026-02-10 13:47:22,624 - utils - INFO - Preprocessing input data
+2026-02-10 13:47:22,624 - utils - INFO - Handling missing values
+2026-02-10 13:47:22,629 - utils - INFO - Missing values found:
+login_frequency     2
+session_duration    1
+support_tickets     2
+dtype: int64
+2026-02-10 13:47:22,632 - utils - INFO - Imputed login_frequency with median: 7.65
+2026-02-10 13:47:22,636 - utils - INFO - Imputed session_duration with median: 27.30
+2026-02-10 13:47:22,639 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:47:22,640 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:47:22,641 - utils - INFO - Creating engagement score
+2026-02-10 13:47:22,646 - utils - INFO - Creating recency features
+2026-02-10 13:47:22,651 - utils - INFO - Creating frequency features
+2026-02-10 13:47:22,653 - utils - INFO - Creating interaction features
+2026-02-10 13:47:22,661 - utils - INFO - Creating behavioral change features
+2026-02-10 13:47:22,668 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 13:47:22,683 - utils - INFO - Aligned input features with training set
+2026-02-10 13:47:22,691 - utils - INFO - Predictions completed
+2026-02-10 13:47:22,707 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:47:22] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:48:35,767 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\streamlit_app.py', reloading
+2026-02-10 13:48:36,309 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 13:48:49,582 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 13:48:49,589 - werkzeug - INFO -  * Debugger PIN: 105-297-698

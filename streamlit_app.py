@@ -163,4 +163,4 @@ else:
 # Footer
 st.sidebar.divider()
 st.sidebar.info("Customer Churn Prediction System v1.0")
-st.sidebar.write("Developed for UET Lahore Project")
+st.sidebar.write("Developed by sumara kanwal as practice projects")
