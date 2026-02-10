@@ -20,10 +20,10 @@ shap>=0.42.0
 joblib>=1.3.0
 tqdm>=4.65.0
 
-
 # Optional: Hyperparameter Optimization
 optuna>=3.3.0
 
 # Web Interface
 flask>=2.3.0
 flask-cors>=4.0.0
+streamlit>=1.24.0
