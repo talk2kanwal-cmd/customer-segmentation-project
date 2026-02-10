@@ -23,30 +23,26 @@ st.set_page_config(
 # Custom CSS for styling
 st.markdown("""
 <style>
-    .main {
-        background-color: #0e1117;
-    }
+    /* Metric Card Styling - Dark box as requested */
     .stMetric {
-        background-color: #1e2130;
-        padding: 15px;
-        border-radius: 10px;
-        border: 1px solid #3e4150;
+        background-color: #1e2130 !important;
+        padding: 15px !important;
+        border-radius: 10px !important;
+        border: 1px solid #3e4150 !important;
     }
-    /* Metric text visibility */
+    /* Force light text color ONLY inside the dark metric cards */
     [data-testid="stMetricLabel"] {
         color: #94a3b8 !important;
     }
     [data-testid="stMetricValue"] {
         color: #ffffff !important;
     }
-    /* Button text visibility */
-    .stButton > button {
+    [data-testid="stMetricDelta"] {
         color: #ffffff !important;
     }
-    /* Tab text visibility */
-    .stTabs [data-baseweb="tab"] {
-        color: #ffffff !important;
-    }
+    
+    /* We REMOVED global backgrounds and global tab/button overrides 
+       to ensure visibility in Light Mode (white text on white background fix) */
 </style>
 """, unsafe_allow_html=True)
 
