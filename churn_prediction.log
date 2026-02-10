@@ -1127,3 +1127,877 @@ Feature names unseen at fit time:
 - ...
 
 2026-02-09 13:50:49,569 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 13:50:49] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-09 13:58:25,974 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.14:5000
+2026-02-09 13:58:25,974 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-09 13:58:25,982 - werkzeug - INFO -  * Restarting with stat
+2026-02-09 13:58:37,832 - werkzeug - WARNING -  * Debugger is active!
+2026-02-09 13:58:37,840 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-09 14:00:36,955 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:36] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-09 14:00:37,064 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:37] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 14:00:37,160 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:37] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-09 14:00:38,067 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:38] "GET /api/models HTTP/1.1" 200 -
+2026-02-09 14:00:40,944 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:40] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-09 14:00:41,631 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:00:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-09 14:01:05,201 - utils - INFO - Generating 100 sample customers
+2026-02-09 14:01:05,202 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-09 14:01:05,222 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-09 14:01:05,222 - utils - INFO - Actual churn rate: 23.00%
+2026-02-09 14:01:05,230 - utils - INFO - Missing values: 8
+2026-02-09 14:01:05,254 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:05] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-09 14:01:06,640 - utils - INFO - Generating 100 sample customers
+2026-02-09 14:01:06,640 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-09 14:01:06,680 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-09 14:01:06,680 - utils - INFO - Actual churn rate: 23.00%
+2026-02-09 14:01:06,688 - utils - INFO - Missing values: 3
+2026-02-09 14:01:06,751 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:06] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-09 14:01:38,874 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:38] "GET /api/health HTTP/1.1" 200 -
+2026-02-09 14:01:39,909 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-09 14:01:50,569 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:50] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-09 14:01:50,629 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:50] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 14:01:51,008 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:51] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-09 14:01:51,743 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:51] "GET /api/models HTTP/1.1" 200 -
+2026-02-09 14:01:52,008 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:01:52] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-09 14:02:00,603 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:00] "GET / HTTP/1.1" 200 -
+2026-02-09 14:02:00,872 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:00] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-09 14:02:00,970 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:00] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-09 14:02:02,141 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:02] "GET /api/models HTTP/1.1" 200 -
+2026-02-09 14:02:02,403 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:02] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-09 14:02:02,538 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-09 14:02:07,754 - utils - INFO - Generating 100 sample customers
+2026-02-09 14:02:07,754 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-09 14:02:07,762 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-09 14:02:07,762 - utils - INFO - Actual churn rate: 23.00%
+2026-02-09 14:02:07,762 - utils - INFO - Missing values: 6
+2026-02-09 14:02:07,794 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:07] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-09 14:02:31,986 - utils - INFO - Making predictions using xgboost
+2026-02-09 14:02:32,017 - utils - INFO - Loading xgboost model
+2026-02-09 14:02:32,049 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-09 14:02:36,384 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-09 14:02:36,570 - utils - INFO - Loaded scaler
+2026-02-09 14:02:36,571 - utils - INFO - Making predictions for 10 customers
+2026-02-09 14:02:36,572 - utils - INFO - Preprocessing input data
+2026-02-09 14:02:36,572 - utils - INFO - Starting feature engineering pipeline
+2026-02-09 14:02:36,572 - utils - INFO - Creating engagement score
+2026-02-09 14:02:36,582 - utils - INFO - Creating recency features
+2026-02-09 14:02:36,587 - utils - INFO - Creating frequency features
+2026-02-09 14:02:36,589 - utils - INFO - Creating interaction features
+2026-02-09 14:02:36,600 - utils - INFO - Creating behavioral change features
+2026-02-09 14:02:36,613 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-09 14:02:36,799 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-09 14:02:36,799 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:36] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-09 14:02:56,624 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:56] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-09 14:02:56,893 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:56] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 14:02:57,312 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:57] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-09 14:02:57,754 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:02:57] "GET /api/models HTTP/1.1" 200 -
+2026-02-09 14:03:02,578 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2026 14:03:02] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-10 11:21:20,994 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:20] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-10 11:21:21,061 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:21] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-10 11:21:21,162 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:21] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-10 11:21:21,429 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:21] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-10 11:21:21,690 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:21] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-10 11:21:22,010 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:22] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-10 11:21:22,312 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 11:21:22,461 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:22] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:21:22,564 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:22] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:21:22,831 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:22] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:21:23,247 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:23] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:21:27,185 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:21:27,229 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:21:27,335 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:21:27,345 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:21:27,345 - utils - INFO - Missing values: 4
+2026-02-10 11:21:27,435 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:27] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:21:47,439 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:21:47,440 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:21:47,452 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:21:47,452 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:21:47,452 - utils - INFO - Missing values: 5
+2026-02-10 11:21:47,472 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:47] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:21:52,284 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:21:52,285 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:21:52,303 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:21:52,303 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:21:52,311 - utils - INFO - Missing values: 6
+2026-02-10 11:21:52,371 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:21:52] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:22:23,794 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\web\\app.py', reloading
+2026-02-10 11:23:04,509 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.14:5000
+2026-02-10 11:23:04,509 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-10 11:23:04,515 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 11:23:08,860 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 11:23:08,970 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 11:28:52,530 - utils - ERROR - Error generating sample data: 400 Bad Request: Failed to decode JSON object: Invalid \escape: line 1 column 14 (char 13)
+2026-02-10 11:28:52,531 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:28:52] "[35m[1mPOST /api/generate-sample HTTP/1.1[0m" 500 -
+2026-02-10 11:31:34,806 - utils - INFO - Generating 5 sample customers
+2026-02-10 11:31:34,806 - utils - INFO - Generating 5 customer records with 23.0% churn rate
+2026-02-10 11:31:34,817 - utils - INFO - Generated dataset shape: (5, 14)
+2026-02-10 11:31:34,818 - utils - INFO - Actual churn rate: 20.00%
+2026-02-10 11:31:34,819 - utils - INFO - Missing values: 0
+2026-02-10 11:31:34,827 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:31:34] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:33:16,990 - utils - INFO - Generating 5 sample customers
+2026-02-10 11:33:16,992 - utils - INFO - Generating 5 customer records with 23.0% churn rate
+2026-02-10 11:33:16,995 - utils - INFO - Generated dataset shape: (5, 14)
+2026-02-10 11:33:16,995 - utils - INFO - Actual churn rate: 20.00%
+2026-02-10 11:33:16,996 - utils - INFO - Missing values: 0
+2026-02-10 11:33:16,998 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:33:16] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:33:36,543 - utils - INFO - Generating 50 sample customers
+2026-02-10 11:33:36,543 - utils - INFO - Generating 50 customer records with 23.0% churn rate
+2026-02-10 11:33:36,543 - utils - INFO - Generated dataset shape: (50, 14)
+2026-02-10 11:33:36,543 - utils - INFO - Actual churn rate: 24.00%
+2026-02-10 11:33:36,543 - utils - INFO - Missing values: 1
+2026-02-10 11:33:36,557 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:33:36] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:34:00,096 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:00] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-10 11:34:00,120 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:00] "[36mGET /css/styles.css HTTP/1.1[0m" 304 -
+2026-02-10 11:34:00,192 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:00] "[36mGET /js/app.js HTTP/1.1[0m" 304 -
+2026-02-10 11:34:00,614 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:00] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:34:00,894 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:00] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:34:03,654 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:03] "GET / HTTP/1.1" 200 -
+2026-02-10 11:34:03,692 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:03] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-10 11:34:03,916 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:03] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-10 11:34:04,235 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:04] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:34:04,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 11:34:04,535 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:04] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:34:09,117 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:34:09,117 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:34:09,120 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:34:09,126 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:34:09,126 - utils - INFO - Missing values: 6
+2026-02-10 11:34:09,135 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:09] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:34:16,794 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:34:16,796 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:34:16,796 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:34:19,929 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:34:20,086 - utils - INFO - Loaded scaler
+2026-02-10 11:34:20,087 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:34:20,087 - utils - INFO - Preprocessing input data
+2026-02-10 11:34:20,087 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:34:20,088 - utils - INFO - Creating engagement score
+2026-02-10 11:34:20,092 - utils - INFO - Creating recency features
+2026-02-10 11:34:20,093 - utils - INFO - Creating frequency features
+2026-02-10 11:34:20,095 - utils - INFO - Creating interaction features
+2026-02-10 11:34:20,097 - utils - INFO - Creating behavioral change features
+2026-02-10 11:34:20,103 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:34:20,117 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-10 11:34:20,117 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:34:20] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:35:19,271 - utils - INFO - Making predictions using decision_tree
+2026-02-10 11:35:19,278 - utils - INFO - Loading decision_tree model
+2026-02-10 11:35:19,279 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:35:20,344 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:35:20,345 - utils - INFO - Loaded scaler
+2026-02-10 11:35:20,345 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:35:20,348 - utils - INFO - Preprocessing input data
+2026-02-10 11:35:20,348 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:35:20,348 - utils - INFO - Creating engagement score
+2026-02-10 11:35:20,353 - utils - INFO - Creating recency features
+2026-02-10 11:35:20,356 - utils - INFO - Creating frequency features
+2026-02-10 11:35:20,361 - utils - INFO - Creating interaction features
+2026-02-10 11:35:20,366 - utils - INFO - Creating behavioral change features
+2026-02-10 11:35:20,371 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:35:20,384 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-10 11:35:20,386 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:35:20] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:35:41,709 - utils - INFO - Making predictions using decision_tree
+2026-02-10 11:35:41,710 - utils - INFO - Loading decision_tree model
+2026-02-10 11:35:41,710 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:35:41,711 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:35:41,713 - utils - INFO - Loaded scaler
+2026-02-10 11:35:41,713 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:35:41,713 - utils - INFO - Preprocessing input data
+2026-02-10 11:35:41,713 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:35:41,713 - utils - INFO - Creating engagement score
+2026-02-10 11:35:41,715 - utils - INFO - Creating recency features
+2026-02-10 11:35:41,719 - utils - INFO - Creating frequency features
+2026-02-10 11:35:41,722 - utils - INFO - Creating interaction features
+2026-02-10 11:35:41,725 - utils - INFO - Creating behavioral change features
+2026-02-10 11:35:41,732 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:35:41,745 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-10 11:35:41,747 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:35:41] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:35:48,994 - utils - INFO - Making predictions using decision_tree
+2026-02-10 11:35:49,000 - utils - INFO - Loading decision_tree model
+2026-02-10 11:35:49,000 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:35:49,003 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:35:49,005 - utils - INFO - Loaded scaler
+2026-02-10 11:35:49,005 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:35:49,005 - utils - INFO - Preprocessing input data
+2026-02-10 11:35:49,005 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:35:49,006 - utils - INFO - Creating engagement score
+2026-02-10 11:35:49,008 - utils - INFO - Creating recency features
+2026-02-10 11:35:49,012 - utils - INFO - Creating frequency features
+2026-02-10 11:35:49,018 - utils - INFO - Creating interaction features
+2026-02-10 11:35:49,021 - utils - INFO - Creating behavioral change features
+2026-02-10 11:35:49,026 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:35:49,039 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- at_risk_indicator
+- declining_usage
+- engagement_score
+- engagement_tenure_interaction
+- is_recently_active
+- ...
+
+2026-02-10 11:35:49,040 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:35:49] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:42:55,945 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\preprocessing.py', reloading
+2026-02-10 11:42:56,601 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 11:43:00,502 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 11:43:00,508 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 11:43:58,811 - utils - INFO - 
+============================================================
+2026-02-10 11:43:58,811 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-02-10 11:43:58,811 - utils - INFO - ============================================================
+2026-02-10 11:43:58,815 - utils - INFO - Starting preprocessing pipeline
+2026-02-10 11:43:58,815 - utils - INFO - Loading raw data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:43:58,815 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:43:58,871 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-10 11:43:58,871 - utils - INFO - Handling missing values
+2026-02-10 11:43:58,881 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 11:43:58,884 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 11:43:58,886 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 11:43:58,887 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 11:43:58,891 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:43:58,891 - utils - INFO - Creating engagement score
+2026-02-10 11:43:58,895 - utils - INFO - Creating recency features
+2026-02-10 11:43:58,897 - utils - INFO - Creating frequency features
+2026-02-10 11:43:58,900 - utils - INFO - Creating interaction features
+2026-02-10 11:43:58,902 - utils - INFO - Creating behavioral change features
+2026-02-10 11:43:58,907 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 11:43:58,907 - utils - INFO - Encoding categorical features
+2026-02-10 11:43:58,921 - utils - INFO - Encoded 3 categorical columns
+2026-02-10 11:43:58,925 - utils - INFO - Splitting data into train/val/test sets
+2026-02-10 11:43:58,944 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-10 11:43:58,944 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-10 11:43:58,950 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-10 11:43:58,950 - utils - INFO - Train churn rate: 23.00%
+2026-02-10 11:43:58,950 - utils - INFO - Val churn rate: 23.00%
+2026-02-10 11:43:58,951 - utils - INFO - Test churn rate: 23.00%
+2026-02-10 11:43:59,622 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-10 11:43:59,746 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-10 11:43:59,958 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-10 11:43:59,961 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:43:59,961 - utils - INFO - Saved processed data and scaler
+2026-02-10 11:43:59,961 - utils - INFO - Preprocessing pipeline completed
+2026-02-10 11:43:59,964 - utils - INFO - 
+============================================================
+2026-02-10 11:43:59,965 - utils - INFO - STEP 4: MODEL TRAINING
+2026-02-10 11:43:59,965 - utils - INFO - ============================================================
+2026-02-10 11:43:59,965 - utils - INFO - Training all baseline models
+2026-02-10 11:43:59,965 - utils - INFO - Training Logistic Regression
+2026-02-10 11:43:59,985 - utils - INFO - Logistic Regression training completed
+2026-02-10 11:43:59,985 - utils - INFO - Evaluating Logistic Regression
+2026-02-10 11:44:00,004 - utils - INFO - Training Decision Tree
+2026-02-10 11:44:00,081 - utils - INFO - Decision Tree training completed
+2026-02-10 11:44:00,081 - utils - INFO - Evaluating Decision Tree
+2026-02-10 11:44:00,115 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:44:00,117 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:44:00,117 - utils - INFO - Saved baseline models
+2026-02-10 11:44:00,118 - utils - INFO - Training all advanced models
+2026-02-10 11:44:00,118 - utils - INFO - Training Random Forest
+2026-02-10 11:44:01,072 - utils - INFO - Random Forest training completed
+2026-02-10 11:44:01,072 - utils - INFO - Evaluating Random Forest
+2026-02-10 11:44:01,259 - utils - INFO - Training XGBoost
+2026-02-10 11:44:01,515 - utils - INFO - XGBoost training completed
+2026-02-10 11:44:01,515 - utils - INFO - Evaluating XGBoost
+2026-02-10 11:44:01,544 - utils - INFO - Training LightGBM
+2026-02-10 11:44:04,117 - utils - INFO - LightGBM training completed
+2026-02-10 11:44:04,117 - utils - INFO - Evaluating LightGBM
+2026-02-10 11:44:04,681 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\random_forest.pkl
+2026-02-10 11:44:04,762 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-10 11:44:04,799 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\lightgbm.pkl
+2026-02-10 11:44:04,801 - utils - INFO - Saved advanced models
+2026-02-10 11:50:47,641 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:47] "GET / HTTP/1.1" 200 -
+2026-02-10 11:50:47,722 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:47] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-10 11:50:47,734 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:47] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-10 11:50:48,252 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:48] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:50:48,610 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 11:50:48,942 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:48] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:50:52,267 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:50:52,271 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:50:52,293 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:50:52,295 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:50:52,301 - utils - INFO - Missing values: 3
+2026-02-10 11:50:52,334 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:50:52] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:51:04,915 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:51:04,916 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:51:04,916 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:51:05,846 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:51:05,883 - utils - INFO - Loaded scaler
+2026-02-10 11:51:05,885 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:51:05,886 - utils - INFO - Preprocessing input data
+2026-02-10 11:51:05,889 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:51:05,890 - utils - INFO - Creating engagement score
+2026-02-10 11:51:05,897 - utils - INFO - Creating recency features
+2026-02-10 11:51:05,904 - utils - INFO - Creating frequency features
+2026-02-10 11:51:05,914 - utils - INFO - Creating interaction features
+2026-02-10 11:51:05,921 - utils - INFO - Creating behavioral change features
+2026-02-10 11:51:05,932 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:51:05,960 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:51:05,962 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:51:05] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:51:11,024 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:51:11,025 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:51:11,026 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:51:11,029 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:51:11,032 - utils - INFO - Loaded scaler
+2026-02-10 11:51:11,033 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:51:11,033 - utils - INFO - Preprocessing input data
+2026-02-10 11:51:11,033 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:51:11,034 - utils - INFO - Creating engagement score
+2026-02-10 11:51:11,041 - utils - INFO - Creating recency features
+2026-02-10 11:51:11,044 - utils - INFO - Creating frequency features
+2026-02-10 11:51:11,050 - utils - INFO - Creating interaction features
+2026-02-10 11:51:11,056 - utils - INFO - Creating behavioral change features
+2026-02-10 11:51:11,063 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:51:11,080 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:51:11,083 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:51:11] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:51:15,659 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:51:15,661 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:51:15,662 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:51:15,667 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:51:15,669 - utils - INFO - Loaded scaler
+2026-02-10 11:51:15,670 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:51:15,670 - utils - INFO - Preprocessing input data
+2026-02-10 11:51:15,671 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:51:15,671 - utils - INFO - Creating engagement score
+2026-02-10 11:51:15,674 - utils - INFO - Creating recency features
+2026-02-10 11:51:15,676 - utils - INFO - Creating frequency features
+2026-02-10 11:51:15,681 - utils - INFO - Creating interaction features
+2026-02-10 11:51:15,684 - utils - INFO - Creating behavioral change features
+2026-02-10 11:51:15,691 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:51:15,705 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:51:15,706 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:51:15] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:51:23,979 - utils - INFO - Generating 2 sample customers
+2026-02-10 11:51:23,980 - utils - INFO - Generating 2 customer records with 23.0% churn rate
+2026-02-10 11:51:23,985 - utils - INFO - Generated dataset shape: (2, 14)
+2026-02-10 11:51:23,985 - utils - INFO - Actual churn rate: 50.00%
+2026-02-10 11:51:23,987 - utils - INFO - Missing values: 1
+2026-02-10 11:51:23,991 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:51:23] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:51:24,179 - utils - INFO - Making predictions using xgboost
+2026-02-10 11:51:24,180 - utils - INFO - Loading xgboost model
+2026-02-10 11:51:24,181 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-10 11:51:24,303 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:51:24,305 - utils - INFO - Loaded scaler
+2026-02-10 11:51:24,305 - utils - INFO - Making predictions for 2 customers
+2026-02-10 11:51:24,306 - utils - INFO - Preprocessing input data
+2026-02-10 11:51:24,306 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:51:24,307 - utils - INFO - Creating engagement score
+2026-02-10 11:51:24,309 - utils - INFO - Creating recency features
+2026-02-10 11:51:24,311 - utils - INFO - Creating frequency features
+2026-02-10 11:51:24,314 - utils - INFO - Creating interaction features
+2026-02-10 11:51:24,316 - utils - INFO - Creating behavioral change features
+2026-02-10 11:51:24,320 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:51:24,328 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- age_group_26-35
+- age_group_36-45
+- age_group_46-55
+- region_North
+- region_West
+- ...
+
+2026-02-10 11:51:24,329 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:51:24] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:52:52,322 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\preprocessing.py', reloading
+2026-02-10 11:52:53,202 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 11:53:13,278 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 11:53:13,284 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 11:54:06,238 - utils - INFO - 
+============================================================
+2026-02-10 11:54:06,238 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-02-10 11:54:06,238 - utils - INFO - ============================================================
+2026-02-10 11:54:06,239 - utils - INFO - Starting preprocessing pipeline
+2026-02-10 11:54:06,239 - utils - INFO - Loading raw data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:54:06,239 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:54:06,301 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-10 11:54:06,302 - utils - INFO - Handling missing values
+2026-02-10 11:54:06,311 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 11:54:06,314 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 11:54:06,316 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 11:54:06,317 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 11:54:06,325 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:54:06,326 - utils - INFO - Creating engagement score
+2026-02-10 11:54:06,329 - utils - INFO - Creating recency features
+2026-02-10 11:54:06,332 - utils - INFO - Creating frequency features
+2026-02-10 11:54:06,335 - utils - INFO - Creating interaction features
+2026-02-10 11:54:06,337 - utils - INFO - Creating behavioral change features
+2026-02-10 11:54:06,346 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 11:54:06,346 - utils - INFO - Encoding categorical features
+2026-02-10 11:54:06,373 - utils - INFO - Encoded 3 categorical columns
+2026-02-10 11:54:06,375 - utils - INFO - Splitting data into train/val/test sets
+2026-02-10 11:54:06,434 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-10 11:54:06,434 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-10 11:54:06,434 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-10 11:54:06,435 - utils - INFO - Train churn rate: 23.00%
+2026-02-10 11:54:06,435 - utils - INFO - Val churn rate: 23.00%
+2026-02-10 11:54:06,435 - utils - INFO - Test churn rate: 23.00%
+2026-02-10 11:54:07,105 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-10 11:54:07,372 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-10 11:54:07,665 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-10 11:54:07,670 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:54:07,671 - utils - INFO - Saved processed data, scaler, and feature names
+2026-02-10 11:54:07,671 - utils - INFO - Preprocessing pipeline completed
+2026-02-10 11:54:07,674 - utils - INFO - 
+============================================================
+2026-02-10 11:54:07,675 - utils - INFO - STEP 4: MODEL TRAINING
+2026-02-10 11:54:07,675 - utils - INFO - ============================================================
+2026-02-10 11:54:07,675 - utils - INFO - Training all baseline models
+2026-02-10 11:54:07,676 - utils - INFO - Training Logistic Regression
+2026-02-10 11:54:07,710 - utils - INFO - Logistic Regression training completed
+2026-02-10 11:54:07,710 - utils - INFO - Evaluating Logistic Regression
+2026-02-10 11:54:07,749 - utils - INFO - Training Decision Tree
+2026-02-10 11:54:07,835 - utils - INFO - Decision Tree training completed
+2026-02-10 11:54:07,835 - utils - INFO - Evaluating Decision Tree
+2026-02-10 11:54:07,875 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:54:07,880 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:54:07,880 - utils - INFO - Saved baseline models
+2026-02-10 11:54:07,881 - utils - INFO - Training all advanced models
+2026-02-10 11:54:07,881 - utils - INFO - Training Random Forest
+2026-02-10 11:54:09,208 - utils - INFO - Random Forest training completed
+2026-02-10 11:54:09,208 - utils - INFO - Evaluating Random Forest
+2026-02-10 11:54:09,431 - utils - INFO - Training XGBoost
+2026-02-10 11:54:09,669 - utils - INFO - XGBoost training completed
+2026-02-10 11:54:09,670 - utils - INFO - Evaluating XGBoost
+2026-02-10 11:54:09,712 - utils - INFO - Training LightGBM
+2026-02-10 11:54:12,359 - utils - INFO - LightGBM training completed
+2026-02-10 11:54:12,359 - utils - INFO - Evaluating LightGBM
+2026-02-10 11:54:12,587 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\random_forest.pkl
+2026-02-10 11:54:12,594 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-10 11:54:12,608 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\lightgbm.pkl
+2026-02-10 11:54:12,609 - utils - INFO - Saved advanced models
+2026-02-10 11:54:58,456 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:54:58] "GET / HTTP/1.1" 200 -
+2026-02-10 11:54:58,545 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:54:58] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-10 11:54:58,604 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:54:58] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-10 11:55:00,166 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:00] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 11:55:00,251 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 11:55:00,667 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:00] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 11:55:02,427 - utils - INFO - Generating 100 sample customers
+2026-02-10 11:55:02,431 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 11:55:02,443 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 11:55:02,445 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 11:55:02,450 - utils - INFO - Missing values: 7
+2026-02-10 11:55:02,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:02] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 11:55:07,244 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:55:07,245 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:55:07,246 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:55:08,580 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:55:08,704 - utils - INFO - Loaded scaler
+2026-02-10 11:55:08,704 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:55:08,705 - utils - INFO - Preprocessing input data
+2026-02-10 11:55:08,705 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:55:08,706 - utils - INFO - Creating engagement score
+2026-02-10 11:55:08,712 - utils - INFO - Creating recency features
+2026-02-10 11:55:08,717 - utils - INFO - Creating frequency features
+2026-02-10 11:55:08,723 - utils - INFO - Creating interaction features
+2026-02-10 11:55:08,729 - utils - INFO - Creating behavioral change features
+2026-02-10 11:55:08,798 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:55:08,831 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:55:08,833 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:08] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:55:11,232 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:55:11,232 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:55:11,234 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:55:11,238 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:55:11,240 - utils - INFO - Loaded scaler
+2026-02-10 11:55:11,240 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:55:11,241 - utils - INFO - Preprocessing input data
+2026-02-10 11:55:11,241 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:55:11,242 - utils - INFO - Creating engagement score
+2026-02-10 11:55:11,244 - utils - INFO - Creating recency features
+2026-02-10 11:55:11,245 - utils - INFO - Creating frequency features
+2026-02-10 11:55:11,247 - utils - INFO - Creating interaction features
+2026-02-10 11:55:11,249 - utils - INFO - Creating behavioral change features
+2026-02-10 11:55:11,254 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:55:11,265 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:55:11,266 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:11] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:55:22,356 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:55:22,358 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:55:22,359 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:55:22,363 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:55:22,367 - utils - INFO - Loaded scaler
+2026-02-10 11:55:22,368 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:55:22,369 - utils - INFO - Preprocessing input data
+2026-02-10 11:55:22,369 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:55:22,369 - utils - INFO - Creating engagement score
+2026-02-10 11:55:22,374 - utils - INFO - Creating recency features
+2026-02-10 11:55:22,381 - utils - INFO - Creating frequency features
+2026-02-10 11:55:22,387 - utils - INFO - Creating interaction features
+2026-02-10 11:55:22,393 - utils - INFO - Creating behavioral change features
+2026-02-10 11:55:22,403 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:55:22,437 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:55:22,438 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:22] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:55:40,273 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 11:55:40,274 - utils - INFO - Loading logistic_regression model
+2026-02-10 11:55:40,274 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:55:40,278 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:55:40,279 - utils - INFO - Loaded scaler
+2026-02-10 11:55:40,279 - utils - INFO - Making predictions for 100 customers
+2026-02-10 11:55:40,279 - utils - INFO - Preprocessing input data
+2026-02-10 11:55:40,280 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:55:40,280 - utils - INFO - Creating engagement score
+2026-02-10 11:55:40,285 - utils - INFO - Creating recency features
+2026-02-10 11:55:40,288 - utils - INFO - Creating frequency features
+2026-02-10 11:55:40,291 - utils - INFO - Creating interaction features
+2026-02-10 11:55:40,296 - utils - INFO - Creating behavioral change features
+2026-02-10 11:55:40,308 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 11:55:40,332 - utils - ERROR - Error making predictions: The feature names should match those that were passed during fit.
+Feature names must be in the same order as they were in fit.
+
+2026-02-10 11:55:40,337 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 11:55:40] "[35m[1mPOST /api/predict HTTP/1.1[0m" 500 -
+2026-02-10 11:57:09,847 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\pipeline.py', reloading
+2026-02-10 11:57:10,423 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 11:57:16,414 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 11:57:16,422 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 11:57:43,563 - utils - INFO - 
+============================================================
+2026-02-10 11:57:43,563 - utils - INFO - STEP 3: DATA PREPROCESSING
+2026-02-10 11:57:43,563 - utils - INFO - ============================================================
+2026-02-10 11:57:43,564 - utils - INFO - Starting preprocessing pipeline
+2026-02-10 11:57:43,564 - utils - INFO - Loading raw data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:57:43,565 - utils - INFO - Loading data from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\raw\customer_data.csv
+2026-02-10 11:57:43,599 - utils - INFO - Loaded 10000 rows and 14 columns
+2026-02-10 11:57:43,600 - utils - INFO - Handling missing values
+2026-02-10 11:57:43,605 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 11:57:43,609 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 11:57:43,611 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 11:57:43,613 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 11:57:43,619 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 11:57:43,620 - utils - INFO - Creating engagement score
+2026-02-10 11:57:43,627 - utils - INFO - Creating recency features
+2026-02-10 11:57:43,630 - utils - INFO - Creating frequency features
+2026-02-10 11:57:43,634 - utils - INFO - Creating interaction features
+2026-02-10 11:57:43,645 - utils - INFO - Creating behavioral change features
+2026-02-10 11:57:43,651 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 11:57:43,651 - utils - INFO - Encoding categorical features
+2026-02-10 11:57:43,671 - utils - INFO - Encoded 3 categorical columns
+2026-02-10 11:57:43,672 - utils - INFO - Splitting data into train/val/test sets
+2026-02-10 11:57:43,707 - utils - INFO - Train set: 6000 samples (60.0%)
+2026-02-10 11:57:43,708 - utils - INFO - Validation set: 2000 samples (20.0%)
+2026-02-10 11:57:43,708 - utils - INFO - Test set: 2000 samples (20.0%)
+2026-02-10 11:57:43,709 - utils - INFO - Train churn rate: 23.00%
+2026-02-10 11:57:43,709 - utils - INFO - Val churn rate: 23.00%
+2026-02-10 11:57:43,709 - utils - INFO - Test churn rate: 23.00%
+2026-02-10 11:57:44,363 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\train.csv
+2026-02-10 11:57:44,566 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\val.csv
+2026-02-10 11:57:44,792 - utils - INFO - Saved data to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\test.csv
+2026-02-10 11:57:44,796 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 11:57:44,797 - utils - INFO - Saved processed data, scaler, and feature names
+2026-02-10 11:57:44,798 - utils - INFO - Preprocessing pipeline completed
+2026-02-10 11:57:44,800 - utils - INFO - 
+============================================================
+2026-02-10 11:57:44,800 - utils - INFO - STEP 4: MODEL TRAINING
+2026-02-10 11:57:44,801 - utils - INFO - ============================================================
+2026-02-10 11:57:44,801 - utils - INFO - Training all baseline models
+2026-02-10 11:57:44,801 - utils - INFO - Training Logistic Regression
+2026-02-10 11:57:44,838 - utils - INFO - Logistic Regression training completed
+2026-02-10 11:57:44,838 - utils - INFO - Evaluating Logistic Regression
+2026-02-10 11:57:44,870 - utils - INFO - Training Decision Tree
+2026-02-10 11:57:44,965 - utils - INFO - Decision Tree training completed
+2026-02-10 11:57:44,966 - utils - INFO - Evaluating Decision Tree
+2026-02-10 11:57:45,000 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 11:57:45,003 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 11:57:45,003 - utils - INFO - Saved baseline models
+2026-02-10 11:57:45,004 - utils - INFO - Training all advanced models
+2026-02-10 11:57:45,004 - utils - INFO - Training Random Forest
+2026-02-10 11:57:46,122 - utils - INFO - Random Forest training completed
+2026-02-10 11:57:46,122 - utils - INFO - Evaluating Random Forest
+2026-02-10 11:57:46,315 - utils - INFO - Training XGBoost
+2026-02-10 11:57:46,567 - utils - INFO - XGBoost training completed
+2026-02-10 11:57:46,568 - utils - INFO - Evaluating XGBoost
+2026-02-10 11:57:46,618 - utils - INFO - Training LightGBM
+2026-02-10 11:57:47,804 - utils - INFO - LightGBM training completed
+2026-02-10 11:57:47,804 - utils - INFO - Evaluating LightGBM
+2026-02-10 11:57:48,044 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\random_forest.pkl
+2026-02-10 11:57:48,049 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-10 11:57:48,067 - utils - INFO - Saved model to F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\lightgbm.pkl
+2026-02-10 11:57:48,067 - utils - INFO - Saved advanced models
+2026-02-10 11:58:43,633 - werkzeug - INFO -  * Detected change in 'F:\\work\\uet lahore\\first semester\\projects\\customer-segmentation-project\\test_prediction.py', reloading
+2026-02-10 11:58:44,702 - werkzeug - INFO -  * Restarting with stat
+2026-02-10 11:58:53,094 - werkzeug - WARNING -  * Debugger is active!
+2026-02-10 11:58:53,110 - werkzeug - INFO -  * Debugger PIN: 105-297-698
+2026-02-10 12:01:49,552 - utils - INFO - Generating 5 customer records with 23.0% churn rate
+2026-02-10 12:01:49,558 - utils - INFO - Generated dataset shape: (5, 14)
+2026-02-10 12:01:49,558 - utils - INFO - Actual churn rate: 20.00%
+2026-02-10 12:01:49,560 - utils - INFO - Missing values: 1
+2026-02-10 12:01:49,562 - utils - INFO - Loading logistic_regression model
+2026-02-10 12:01:49,562 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 12:01:49,644 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 12:01:49,647 - utils - INFO - Loaded scaler
+2026-02-10 12:01:49,648 - utils - INFO - Loaded 29 feature names
+2026-02-10 12:01:49,648 - utils - INFO - Making predictions for 5 customers
+2026-02-10 12:01:49,648 - utils - INFO - Preprocessing input data
+2026-02-10 12:01:49,648 - utils - INFO - Handling missing values
+2026-02-10 12:01:49,650 - utils - INFO - Missing values found:
+session_duration    1
+dtype: int64
+2026-02-10 12:01:49,653 - utils - INFO - Imputed session_duration with median: 16.95
+2026-02-10 12:01:49,656 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 12:01:49,656 - utils - INFO - Creating engagement score
+2026-02-10 12:01:49,659 - utils - INFO - Creating recency features
+2026-02-10 12:01:49,662 - utils - INFO - Creating frequency features
+2026-02-10 12:01:49,665 - utils - INFO - Creating interaction features
+2026-02-10 12:01:49,667 - utils - INFO - Creating behavioral change features
+2026-02-10 12:01:49,671 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 12:01:49,678 - utils - INFO - Aligned input features with training set
+2026-02-10 12:01:49,729 - utils - INFO - Predictions completed
+2026-02-10 12:37:21,720 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:21] "GET / HTTP/1.1" 200 -
+2026-02-10 12:37:21,786 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:21] "GET /css/styles.css HTTP/1.1" 200 -
+2026-02-10 12:37:21,863 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:21] "GET /js/app.js HTTP/1.1" 200 -
+2026-02-10 12:37:22,333 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:22] "GET /api/models HTTP/1.1" 200 -
+2026-02-10 12:37:22,584 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-10 12:37:22,895 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:22] "GET /api/model-comparison HTTP/1.1" 200 -
+2026-02-10 12:37:25,881 - utils - INFO - Generating 100 sample customers
+2026-02-10 12:37:25,886 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 12:37:25,897 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 12:37:25,898 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 12:37:25,903 - utils - INFO - Missing values: 6
+2026-02-10 12:37:25,928 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:25] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 12:37:29,733 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 12:37:29,736 - utils - INFO - Loading logistic_regression model
+2026-02-10 12:37:29,736 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 12:37:30,906 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 12:37:30,910 - utils - INFO - Loaded scaler
+2026-02-10 12:37:30,911 - utils - INFO - Loaded 29 feature names
+2026-02-10 12:37:30,912 - utils - INFO - Making predictions for 100 customers
+2026-02-10 12:37:30,912 - utils - INFO - Preprocessing input data
+2026-02-10 12:37:30,912 - utils - INFO - Handling missing values
+2026-02-10 12:37:30,920 - utils - INFO - Missing values found:
+login_frequency     3
+session_duration    1
+support_tickets     2
+dtype: int64
+2026-02-10 12:37:30,959 - utils - INFO - Imputed login_frequency with median: 9.10
+2026-02-10 12:37:30,961 - utils - INFO - Imputed session_duration with median: 29.10
+2026-02-10 12:37:30,965 - utils - INFO - Imputed support_tickets with median: 2.00
+2026-02-10 12:37:30,969 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 12:37:30,969 - utils - INFO - Creating engagement score
+2026-02-10 12:37:30,974 - utils - INFO - Creating recency features
+2026-02-10 12:37:30,976 - utils - INFO - Creating frequency features
+2026-02-10 12:37:30,982 - utils - INFO - Creating interaction features
+2026-02-10 12:37:30,986 - utils - INFO - Creating behavioral change features
+2026-02-10 12:37:30,992 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 12:37:31,005 - utils - INFO - Aligned input features with training set
+2026-02-10 12:37:31,069 - utils - INFO - Predictions completed
+2026-02-10 12:37:31,094 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:31] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 12:37:56,538 - utils - INFO - Making predictions using decision_tree
+2026-02-10 12:37:56,540 - utils - INFO - Loading decision_tree model
+2026-02-10 12:37:56,541 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 12:37:57,886 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 12:37:57,888 - utils - INFO - Loaded scaler
+2026-02-10 12:37:57,889 - utils - INFO - Loaded 29 feature names
+2026-02-10 12:37:57,889 - utils - INFO - Making predictions for 100 customers
+2026-02-10 12:37:57,890 - utils - INFO - Preprocessing input data
+2026-02-10 12:37:57,890 - utils - INFO - Handling missing values
+2026-02-10 12:37:57,894 - utils - INFO - Missing values found:
+login_frequency     3
+session_duration    1
+support_tickets     2
+dtype: int64
+2026-02-10 12:37:57,899 - utils - INFO - Imputed login_frequency with median: 9.10
+2026-02-10 12:37:57,903 - utils - INFO - Imputed session_duration with median: 29.10
+2026-02-10 12:37:57,905 - utils - INFO - Imputed support_tickets with median: 2.00
+2026-02-10 12:37:57,908 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 12:37:57,909 - utils - INFO - Creating engagement score
+2026-02-10 12:37:57,921 - utils - INFO - Creating recency features
+2026-02-10 12:37:57,925 - utils - INFO - Creating frequency features
+2026-02-10 12:37:57,931 - utils - INFO - Creating interaction features
+2026-02-10 12:37:57,936 - utils - INFO - Creating behavioral change features
+2026-02-10 12:37:57,944 - utils - INFO - Feature engineering completed. Total features: 24
+2026-02-10 12:37:57,961 - utils - INFO - Aligned input features with training set
+2026-02-10 12:37:57,974 - utils - INFO - Predictions completed
+2026-02-10 12:37:57,991 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 12:37:57] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:06:28,257 - utils - INFO - Generating 100 sample customers
+2026-02-10 13:06:28,261 - utils - INFO - Generating 100 customer records with 23.0% churn rate
+2026-02-10 13:06:28,278 - utils - INFO - Generated dataset shape: (100, 14)
+2026-02-10 13:06:28,280 - utils - INFO - Actual churn rate: 23.00%
+2026-02-10 13:06:28,286 - utils - INFO - Missing values: 9
+2026-02-10 13:06:28,311 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:06:28] "POST /api/generate-sample HTTP/1.1" 200 -
+2026-02-10 13:10:26,879 - utils - INFO - Making predictions using decision_tree
+2026-02-10 13:10:26,885 - utils - INFO - Loading decision_tree model
+2026-02-10 13:10:26,886 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\decision_tree.pkl
+2026-02-10 13:10:26,889 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:10:26,891 - utils - INFO - Loaded scaler
+2026-02-10 13:10:26,893 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:10:26,893 - utils - INFO - Making predictions for 10000 customers
+2026-02-10 13:10:26,893 - utils - INFO - Preprocessing input data
+2026-02-10 13:10:26,894 - utils - INFO - Handling missing values
+2026-02-10 13:10:26,899 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 13:10:26,903 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 13:10:26,903 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 13:10:26,915 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:10:26,927 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:10:26,928 - utils - INFO - Creating engagement score
+2026-02-10 13:10:26,933 - utils - INFO - Creating recency features
+2026-02-10 13:10:26,938 - utils - INFO - Creating frequency features
+2026-02-10 13:10:26,946 - utils - INFO - Creating interaction features
+2026-02-10 13:10:26,951 - utils - INFO - Creating behavioral change features
+2026-02-10 13:10:26,961 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 13:10:26,988 - utils - INFO - Aligned input features with training set
+2026-02-10 13:10:27,044 - utils - INFO - Predictions completed
+2026-02-10 13:10:27,347 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:10:27] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:10:49,215 - utils - INFO - Making predictions using random_forest
+2026-02-10 13:10:49,217 - utils - INFO - Loading random_forest model
+2026-02-10 13:10:49,218 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\random_forest.pkl
+2026-02-10 13:10:50,718 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:10:50,727 - utils - INFO - Loaded scaler
+2026-02-10 13:10:50,728 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:10:50,728 - utils - INFO - Making predictions for 10000 customers
+2026-02-10 13:10:50,728 - utils - INFO - Preprocessing input data
+2026-02-10 13:10:50,728 - utils - INFO - Handling missing values
+2026-02-10 13:10:50,740 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 13:10:50,744 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 13:10:50,753 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 13:10:50,759 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:10:50,776 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:10:50,783 - utils - INFO - Creating engagement score
+2026-02-10 13:10:50,790 - utils - INFO - Creating recency features
+2026-02-10 13:10:50,797 - utils - INFO - Creating frequency features
+2026-02-10 13:10:50,805 - utils - INFO - Creating interaction features
+2026-02-10 13:10:50,813 - utils - INFO - Creating behavioral change features
+2026-02-10 13:10:50,824 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 13:10:50,858 - utils - INFO - Aligned input features with training set
+2026-02-10 13:10:51,476 - utils - INFO - Predictions completed
+2026-02-10 13:10:51,866 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:10:51] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:11:05,294 - utils - INFO - Making predictions using xgboost
+2026-02-10 13:11:05,302 - utils - INFO - Loading xgboost model
+2026-02-10 13:11:05,302 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\xgboost.pkl
+2026-02-10 13:11:06,073 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:11:06,078 - utils - INFO - Loaded scaler
+2026-02-10 13:11:06,080 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:11:06,081 - utils - INFO - Making predictions for 10000 customers
+2026-02-10 13:11:06,081 - utils - INFO - Preprocessing input data
+2026-02-10 13:11:06,081 - utils - INFO - Handling missing values
+2026-02-10 13:11:06,090 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 13:11:06,099 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 13:11:06,107 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 13:11:06,114 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:11:06,122 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:11:06,127 - utils - INFO - Creating engagement score
+2026-02-10 13:11:06,128 - utils - INFO - Creating recency features
+2026-02-10 13:11:06,136 - utils - INFO - Creating frequency features
+2026-02-10 13:11:06,144 - utils - INFO - Creating interaction features
+2026-02-10 13:11:06,152 - utils - INFO - Creating behavioral change features
+2026-02-10 13:11:06,160 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 13:11:06,207 - utils - INFO - Aligned input features with training set
+2026-02-10 13:11:06,332 - utils - INFO - Predictions completed
+2026-02-10 13:11:07,191 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:11:07] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:11:32,090 - utils - INFO - Making predictions using logistic_regression
+2026-02-10 13:11:32,094 - utils - INFO - Loading logistic_regression model
+2026-02-10 13:11:32,094 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\logistic_regression.pkl
+2026-02-10 13:11:32,099 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:11:32,101 - utils - INFO - Loaded scaler
+2026-02-10 13:11:32,103 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:11:32,103 - utils - INFO - Making predictions for 10000 customers
+2026-02-10 13:11:32,104 - utils - INFO - Preprocessing input data
+2026-02-10 13:11:32,104 - utils - INFO - Handling missing values
+2026-02-10 13:11:32,110 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 13:11:32,112 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 13:11:32,117 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 13:11:32,123 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:11:32,130 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:11:32,133 - utils - INFO - Creating engagement score
+2026-02-10 13:11:32,137 - utils - INFO - Creating recency features
+2026-02-10 13:11:32,144 - utils - INFO - Creating frequency features
+2026-02-10 13:11:32,152 - utils - INFO - Creating interaction features
+2026-02-10 13:11:32,159 - utils - INFO - Creating behavioral change features
+2026-02-10 13:11:32,172 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 13:11:32,207 - utils - INFO - Aligned input features with training set
+2026-02-10 13:11:32,255 - utils - INFO - Predictions completed
+2026-02-10 13:11:32,617 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:11:32] "POST /api/predict HTTP/1.1" 200 -
+2026-02-10 13:11:38,921 - utils - INFO - Making predictions using lightgbm
+2026-02-10 13:11:38,921 - utils - INFO - Loading lightgbm model
+2026-02-10 13:11:38,921 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\models\saved\lightgbm.pkl
+2026-02-10 13:11:39,644 - utils - INFO - Loading model from F:\work\uet lahore\first semester\projects\customer-segmentation-project\data\processed\scaler.pkl
+2026-02-10 13:11:39,652 - utils - INFO - Loaded scaler
+2026-02-10 13:11:39,652 - utils - INFO - Loaded 29 feature names
+2026-02-10 13:11:39,652 - utils - INFO - Making predictions for 10000 customers
+2026-02-10 13:11:39,652 - utils - INFO - Preprocessing input data
+2026-02-10 13:11:39,652 - utils - INFO - Handling missing values
+2026-02-10 13:11:39,660 - utils - INFO - Missing values found:
+login_frequency     202
+session_duration    223
+support_tickets     186
+dtype: int64
+2026-02-10 13:11:39,660 - utils - INFO - Imputed login_frequency with median: 7.80
+2026-02-10 13:11:39,668 - utils - INFO - Imputed session_duration with median: 24.80
+2026-02-10 13:11:39,668 - utils - INFO - Imputed support_tickets with median: 1.00
+2026-02-10 13:11:39,676 - utils - INFO - Starting feature engineering pipeline
+2026-02-10 13:11:39,676 - utils - INFO - Creating engagement score
+2026-02-10 13:11:39,684 - utils - INFO - Creating recency features
+2026-02-10 13:11:39,684 - utils - INFO - Creating frequency features
+2026-02-10 13:11:39,692 - utils - INFO - Creating interaction features
+2026-02-10 13:11:39,700 - utils - INFO - Creating behavioral change features
+2026-02-10 13:11:39,707 - utils - INFO - Feature engineering completed. Total features: 25
+2026-02-10 13:11:39,735 - utils - INFO - Aligned input features with training set
+2026-02-10 13:11:43,152 - utils - INFO - Predictions completed
+2026-02-10 13:11:43,465 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2026 13:11:43] "POST /api/predict HTTP/1.1" 200 -

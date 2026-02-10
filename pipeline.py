@@ -7,11 +7,13 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import sys
+import json
 
 sys.path.append(str(Path(__file__).parent))
 from config import SAVED_MODELS_DIR, PROCESSED_DATA_DIR, FEATURE_ENGINEERING
 from utils import setup_logging, load_model, load_data, save_data
 from feature_engineering import FeatureEngineer
+from preprocessing import DataPreprocessor
 
 class ChurnPredictionPipeline:
     """End-to-end pipeline for churn prediction"""
@@ -28,7 +30,9 @@ class ChurnPredictionPipeline:
         self.model = None
         self.scaler = None
         self.feature_engineer = FeatureEngineer()
+        self.preprocessor = DataPreprocessor()
         self.risk_thresholds = FEATURE_ENGINEERING['risk_thresholds']
+        self.feature_names = None
         
     def load_model_and_scaler(self):
         """Load trained model and scaler"""
@@ -48,6 +52,15 @@ class ChurnPredictionPipeline:
         else:
             self.logger.warning("Scaler not found, predictions may be inaccurate")
         
+        # Load feature names
+        feature_names_path = PROCESSED_DATA_DIR / 'feature_names.json'
+        if feature_names_path.exists():
+            with open(feature_names_path, 'r') as f:
+                self.feature_names = json.load(f)
+            self.logger.info(f"Loaded {len(self.feature_names)} feature names")
+        else:
+            self.logger.warning("Feature names JSON not found, using raw columns")
+        
         return self.model
     
     def preprocess_input(self, df):
@@ -62,6 +75,9 @@ class ChurnPredictionPipeline:
         """
         self.logger.info("Preprocessing input data")
         
+        # Handle missing values
+        df = self.preprocessor.handle_missing_values(df)
+        
         # Apply feature engineering
         df = self.feature_engineer.create_all_features(df)
         
@@ -69,11 +85,16 @@ class ChurnPredictionPipeline:
         categorical_cols = ['subscription_tier', 'age_group', 'region']
         df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
         
-        # Remove customer_id and churned if present
-        feature_cols = [col for col in df_encoded.columns 
-                       if col not in ['customer_id', 'churned']]
-        
-        X = df_encoded[feature_cols]
+        # Scale features
+        # Ensure we have all columns in the correct order
+        if self.feature_names is not None:
+            # Reindex to match training columns, filling missing dummies with 0
+            X = df_encoded.reindex(columns=self.feature_names, fill_value=0)
+            self.logger.info("Aligned input features with training set")
+        else:
+            feature_cols = [col for col in df_encoded.columns 
+                           if col not in ['customer_id', 'churned']]
+            X = df_encoded[feature_cols]
         
         # Scale features
         if self.scaler is not None:
@@ -108,9 +129,18 @@ class ChurnPredictionPipeline:
         # Preprocess
         X = self.preprocess_input(df)
         
-        # Predict
-        predictions = self.model.predict(X)
-        probabilities = self.model.predict_proba(X)[:, 1]
+        # Predict using values to avoid feature name mismatch warnings/errors
+        predictions = self.model.predict(X.values)
+        
+        if hasattr(self.model, "predict_proba"):
+            probabilities = self.model.predict_proba(X.values)[:, 1]
+        else:
+            # For models that don't support predict_proba, use decision_function or fallback
+            if hasattr(self.model, "decision_function"):
+                scores = self.model.decision_function(X.values)
+                probabilities = 1 / (1 + np.exp(-scores))  # Sigmoid
+            else:
+                probabilities = predictions.astype(float)
         
         # Create results DataFrame
         results = pd.DataFrame({

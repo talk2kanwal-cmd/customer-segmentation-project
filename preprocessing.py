@@ -9,11 +9,13 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import sys
+import json
 
 sys.path.append(str(Path(__file__).parent))
 from config import (RAW_DATA_DIR, PROCESSED_DATA_DIR, MODEL_PARAMS, 
                     DATA_GENERATION, RANDOM_SEED)
 from utils import setup_logging, load_data, save_data, save_model
+from feature_engineering import FeatureEngineer
 
 class DataPreprocessor:
     """Handles all data preprocessing operations"""
@@ -144,6 +146,10 @@ class DataPreprocessor:
         # Handle missing values
         df = self.handle_missing_values(df)
         
+        # Apply feature engineering
+        engineer = FeatureEngineer()
+        df = engineer.create_all_features(df)
+        
         # Encode categorical features
         df = self.encode_categorical_features(df, fit=True)
         
@@ -196,7 +202,11 @@ class DataPreprocessor:
             # Save scaler
             save_model(self.scaler, PROCESSED_DATA_DIR / 'scaler.pkl')
             
-            self.logger.info("Saved processed data and scaler")
+            # Save feature names for prediction consistency
+            with open(PROCESSED_DATA_DIR / 'feature_names.json', 'w') as f:
+                json.dump(X_train.columns.tolist(), f)
+            
+            self.logger.info("Saved processed data, scaler, and feature names")
         
         self.logger.info("Preprocessing pipeline completed")
         

@@ -8,6 +8,7 @@ from pathlib import Path
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 import pandas as pd
+import numpy as np
 import json
 
 # Add parent directory to path
@@ -178,7 +179,7 @@ def predict():
             'model': model_name,
             'summary': summary,
             'risk_distribution': risk_distribution,
-            'predictions': results.to_dict(orient='records')
+            'predictions': results.replace({np.nan: None}).to_dict(orient='records')
         })
     
     except FileNotFoundError as e:
@@ -217,7 +218,7 @@ def generate_sample():
             df = df.drop(columns=['churned'])
             
         # Replace NaNs with None for valid JSON serialization
-        df = df.where(pd.notnull(df), None)
+        df = df.replace({np.nan: None})
         
         return jsonify({
             'success': True,
