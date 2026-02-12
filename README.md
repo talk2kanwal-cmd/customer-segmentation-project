@@ -1,6 +1,9 @@
 # 🎯 Customer Churn Prediction System
 
-A comprehensive machine learning system for predicting customer churn with multiple model implementations, a web interface, and detailed evaluation metrics.
+A comprehensive machine learning system for predicting customer churn with multiple model implementation, a web interface, and detailed evaluation metrics.
+## 📊 link to Demo
+https://customer-segmentation-project-zkf9tq8gmey3qcwbfexmvd.streamlit.app/
+
 
 ## 📊 Dataset Details
 
