@@ -257,5 +257,5 @@ web/
 ---
 
 **Built with**: Flask, HTML5, CSS3, JavaScript, Chart.js
-**Author**: UET Lahore - First Semester Project
+**Author**: Sumara kanwal as personal demo project 
 **Last Updated**: February 2026
