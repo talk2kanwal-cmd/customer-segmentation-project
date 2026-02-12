@@ -4,6 +4,23 @@ A comprehensive machine learning system for predicting customer churn with multi
 ## 📊 link to Demo
 https://customer-segmentation-project-zkf9tq8gmey3qcwbfexmvd.streamlit.app/
 
+Customer Churn & Engagement Prediction System
+
+Machine Learning | Python | Supervised Classification
+
+Developed a churn prediction model using 10,000 customer behavioral records, split into 70/15/15 train-validation-test sets for robust evaluation.
+
+Engineered behavioral and engagement-based features including recency, frequency, tenure, and activity trends to improve predictive performance.
+
+Trained and compared supervised models (Logistic Regression, Random Forest, Gradient Boosting) to identify optimal performance.
+
+Evaluated models using Precision, Recall, F1-score, and ROC-AUC to align with business retention strategy.
+
+Optimized hyperparameters and decision thresholds using validation data to balance churn detection and false positives.
+
+Delivered interpretable insights highlighting key churn drivers to support targeted retention strategies.
+
+Tech Stack: Python, Pandas, NumPy, Scikit-learn, XGBoost
 
 ## 📊 Dataset Details
 
