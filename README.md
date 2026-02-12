@@ -4,9 +4,9 @@ A comprehensive machine learning system for predicting customer churn with multi
 ## 📊 link to Demo
 https://customer-segmentation-project-zkf9tq8gmey3qcwbfexmvd.streamlit.app/
 
-Customer Churn & Engagement Prediction System
+# 🎯 Customer Churn Prediction System
 
-Machine Learning | Python | Supervised Classification
+# 🎯 Machine Learning | Python | Supervised Classification
 
 Developed a churn prediction model using 10,000 customer behavioral records, split into 70/15/15 train-validation-test sets for robust evaluation.
 
@@ -19,7 +19,7 @@ Evaluated models using Precision, Recall, F1-score, and ROC-AUC to align with bu
 Optimized hyperparameters and decision thresholds using validation data to balance churn detection and false positives.
 
 Delivered interpretable insights highlighting key churn drivers to support targeted retention strategies.
-
+## 📊Tech Stack
 Tech Stack: Python, Pandas, NumPy, Scikit-learn, XGBoost
 
 ## 📊 Dataset Details
@@ -32,13 +32,59 @@ The project uses a synthetically generated customer churn dataset with the follo
 - **Test Set**: ~1,500 (15%)
 
 ### Features
-The dataset includes various customer attributes such as:
-- Demographic information
-- Account details
-- Service usage patterns
-- Behavioral metrics
 
-The data is preprocessed with robust imputation and feature engineering to ensure production-ready predictions.
+The dataset contains **14 raw features** and **10 engineered features** organized into the following categories:
+
+#### Raw Customer Features
+
+**Demographic & Account Information:**
+- `customer_id`: Unique customer identifier (CUST_XXXXXX)
+- `age_group`: Categorical age ranges (18-25, 26-35, 36-45, 46-55, 56+)
+- `region`: Geographic region (North, South, East, West)
+- `subscription_tier`: Service level (Basic, Standard, Premium)
+- `tenure_months`: Length of customer relationship (1-60 months)
+
+**Behavioral Engagement Metrics:**
+- `login_frequency`: Average logins per month (0-45)
+- `session_duration`: Average session length in minutes (0-123)
+- `feature_usage_count`: Count of product features used (0-22)
+- `days_since_last_login`: Days since last activity (0-45)
+
+**Transaction & Support Metrics:**
+- `support_tickets`: Total support requests (0-10)
+- `payment_failures`: Number of failed payment attempts (0-5)
+- `discount_usage`: Count of discounts applied (0-1)
+- `referrals_made`: Number of customer referrals (0-4)
+
+**Target Variable:**
+- `churned`: Binary indicator (0 = Retained, 1 = Churned)
+
+#### Engineered Features
+
+The feature engineering pipeline creates 10 additional features to capture complex behavioral patterns:
+
+**Composite Engagement:**
+- `engagement_score`: Weighted combination of login frequency, session duration, and feature usage (normalized 0-1)
+
+**Recency Indicators:**
+- `recency_ratio`: Days since last login / tenure (identifies declining engagement)
+- `is_recently_active`: Binary flag for activity in last 7 days
+
+**Frequency Ratios:**
+- `support_tickets_per_month`: Support tickets normalized by tenure
+- `payment_failures_per_month`: Payment failures normalized by tenure
+- `login_frequency_per_tenure`: Login frequency normalized by tenure
+
+**Interaction Features:**
+- `engagement_tenure_interaction`: Engagement score × tenure (loyal engaged customers)
+- `total_engagement_proxy`: Login frequency × session duration (total engagement time)
+- `problem_indicator`: Support tickets × payment failures (problematic customer flag)
+
+**Risk Indicators:**
+- `declining_usage`: Binary flag for high recency with low engagement
+- `at_risk_indicator`: Multi-signal risk flag (payment issues + support tickets + inactivity)
+
+The data undergoes robust preprocessing with median imputation for missing values and StandardScaler normalization to ensure production-ready predictions.
 
 ## 🏆 Model Performance Results
 
